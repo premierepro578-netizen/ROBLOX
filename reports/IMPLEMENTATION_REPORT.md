@@ -275,7 +275,10 @@ D7 retention as the guardrail. Roll back any monetization change that lowers D7.
 - Design thumbnails for phones first and communicate the feeling of play
   ([Tizzy RBLX @ 5:39](https://www.youtube.com/watch?v=az7em1IoBhA&t=339s)).
 
-**Prompt:** [`34-discovery-growth.md`](prompt-framework/34-discovery-growth.md)
+**Deep dive:** [`thumbnails/MRBEAST_THUMBNAIL_STUDY.md`](thumbnails/MRBEAST_THUMBNAIL_STUDY.md) covers thumbnail and icon
+design from 389 MrBeast thumbnails and the attention research, with a Roblox playbook and the
+`bpe thumbs score` QA tool.
+**Prompts:** [`34-discovery-growth.md`](prompt-framework/34-discovery-growth.md), [`35-thumbnail-icon-brief.md`](prompt-framework/35-thumbnail-icon-brief.md)
 
 ---
 
@@ -350,7 +353,7 @@ low-ticket conversion are what the recommender rewards.
 
 ## 9. The prompt framework
 
-[`prompt-framework/`](prompt-framework/README.md) contains 12 prompts. Each is pre-filled with the
+[`prompt-framework/`](prompt-framework/README.md) contains 13 prompts. Each is pre-filled with the
 curated findings, the mined evidence (with deep links) and the Roblox playbook for its pillar;
 only the designer-specific slots (`{{game_concept}}`, `{{current_metrics}}`, …) remain.
 
@@ -358,7 +361,7 @@ only the designer-specific slots (`{{game_concept}}`, `{{current_metrics}}`, …
 |---|---|---|
 | System | `00-architect-system` | System prompt for every session: evidence-first, server-authoritative, measured, fair |
 | Analysis | `10-extract-insights`, `20-synthesize-blueprint` | Power the Claude extractor; synthesise new research |
-| Design | `30` core loop → `32` FTUE → `31` retention → `33` monetization → `34` discovery | Chain in this order; each output feeds the next prompt's `game_concept` |
+| Design | `30` core loop → `32` FTUE → `31` retention → `33` monetization → `34` discovery → `35` thumbnail & icon brief | Chain in this order; each output feeds the next prompt's `game_concept` |
 | Build | `40-luau-implementation-spec` | One blueprint item → modules, data model, remotes, receipts, tests, `--!strict` Luau |
 | Measure | `50-analytics-instrumentation`, `51-metrics-diagnosis` | Event plan; diagnose live metrics into ranked experiments |
 | Review | `60-design-review-redteam` | Four-persona red team: veteran, 10-year-old on a phone, exploiter, policy reviewer |

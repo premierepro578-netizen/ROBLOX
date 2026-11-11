@@ -6,6 +6,9 @@
     bpe status
     bpe prompts list
     bpe prompts render core-loop-designer --var game_concept="pet battler"
+    bpe thumbs study --channel https://www.youtube.com/@MrBeast/videos
+    bpe thumbs score my_thumbnail.png --preview preview.png
+    bpe thumbs score my_icon.png --kind icon
 """
 
 from __future__ import annotations
@@ -119,6 +122,33 @@ def cmd_prompts(args) -> int:
     return 0
 
 
+def cmd_thumbs(args) -> int:
+    try:
+        from blueprint_engine.visual import score as score_mod
+        from blueprint_engine.visual import study as study_mod
+    except ImportError as exc:
+        print(f"error: {exc}. Install the visual extra: pip install -e '.[visual]'", file=sys.stderr)
+        return 1
+    if args.thumbs_cmd == "study":
+        st = study_mod.run_study(args.channel, args.data_dir, limit=args.limit, workers=args.workers or 4,
+                                 refresh_listing=args.refresh)
+        sm = study_mod.summarize(st, recent_from_year=args.recent_from)
+        study_mod.save(st, sm, args.out)
+        print(f"analysed {sm['n_analysed']} thumbnails ({sm['n_recent']} from {args.recent_from}+) -> "
+              f"{args.out}/benchmark.json, dataset.json")
+        return 0
+    bench = None
+    bpath = Path(args.benchmark)
+    if bpath.is_file():
+        bench = json.loads(bpath.read_text(encoding="utf-8"))
+    else:
+        print(f"note: no benchmark at {bpath}; only platform checks will run", file=sys.stderr)
+    preview = args.preview or str(Path(args.image).with_suffix("")) + f".{args.kind}-preview.png"
+    result = score_mod.score(args.image, kind=args.kind, benchmark=bench, preview=preview)
+    print(json.dumps(result, indent=1) if args.json else score_mod.format_report(result))
+    return 1 if result["summary"].get("fail") else 0
+
+
 def _load_blueprint(path: Path):
     from blueprint_engine.synthesis.blueprint import Blueprint, Evidence, MechanicFinding, PillarFinding
 
@@ -170,6 +200,22 @@ def build_parser() -> argparse.ArgumentParser:
     pr.add_argument("--var", action="append", help="fill a slot: --var game_concept='...'")
     pr.add_argument("--out", default=None)
     pr.set_defaults(fn=cmd_prompts)
+
+    th = sub.add_parser("thumbs", help="study a channel's thumbnails, or score your own thumbnail/icon")
+    th_sub = th.add_subparsers(dest="thumbs_cmd", required=True)
+    ts = th_sub.add_parser("study", help="download + measure a channel's thumbnails, relate to performance")
+    ts.add_argument("--channel", default="https://www.youtube.com/@MrBeast/videos")
+    ts.add_argument("--limit", type=int, default=400)
+    ts.add_argument("--recent-from", type=int, default=2022, help="first year of the 'recent' benchmark")
+    ts.add_argument("--data-dir", default="data/thumbs")
+    ts.add_argument("--out", default="reports/thumbnails")
+    sc = th_sub.add_parser("score", help="check a thumbnail (16:9) or icon (square) draft")
+    sc.add_argument("image")
+    sc.add_argument("--kind", choices=("thumbnail", "icon"), default="thumbnail")
+    sc.add_argument("--benchmark", default="reports/thumbnails/benchmark.json")
+    sc.add_argument("--preview", default=None, help="where to write the preview sheet (default: next to the image)")
+    sc.add_argument("--json", action="store_true")
+    th.set_defaults(fn=cmd_thumbs)
     return ap
 
 

@@ -94,6 +94,9 @@ def variables_from_blueprint(bp: Blueprint, key_findings: dict[str, str] | None 
         "taxonomy": taxonomy_text(TAXONOMY),
     }
     key_findings = key_findings or {}
+    # Every curated section becomes a slot (e.g. key_findings_thumbnails), pillar or not.
+    for section, text in key_findings.items():
+        v[f"key_findings_{section}"] = text
     for p in bp.pillars:
         v[f"evidence_{p.pillar}"] = evidence_digest(bp, p.pillar)
         v[f"playbook_{p.pillar}"] = playbook_digest(bp, p.pillar)

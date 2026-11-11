@@ -1,0 +1,704 @@
+{
+ "channel": "MrBeast",
+ "followers": 526000000,
+ "fetched": "2026-11-11",
+ "n_analysed": 389,
+ "n_eligible": 387,
+ "recent_from_year": 2022,
+ "correlations_with_log2_outlier": {
+  "brightness": {
+   "rho": 0.056,
+   "p": 0.2693,
+   "top_quartile_median": 54.17,
+   "bottom_quartile_median": 53.22
+  },
+  "contrast": {
+   "rho": -0.103,
+   "p": 0.0427,
+   "top_quartile_median": 25.68,
+   "bottom_quartile_median": 26.35
+  },
+  "saturation": {
+   "rho": 0.047,
+   "p": 0.3706,
+   "top_quartile_median": 0.331,
+   "bottom_quartile_median": 0.3295
+  },
+  "vivid_share": {
+   "rho": 0.043,
+   "p": 0.4096,
+   "top_quartile_median": 0.321,
+   "bottom_quartile_median": 0.305
+  },
+  "colorfulness": {
+   "rho": 0.106,
+   "p": 0.0374,
+   "top_quartile_median": 64.43,
+   "bottom_quartile_median": 59.53
+  },
+  "warm_share": {
+   "rho": -0.01,
+   "p": 0.846,
+   "top_quartile_median": 0.653,
+   "bottom_quartile_median": 0.685
+  },
+  "hue_entropy": {
+   "rho": -0.009,
+   "p": 0.8596,
+   "top_quartile_median": 0.454,
+   "bottom_quartile_median": 0.4345
+  },
+  "palette_top2": {
+   "rho": -0.024,
+   "p": 0.6405,
+   "top_quartile_median": 0.559,
+   "bottom_quartile_median": 0.57
+  },
+  "edge_density": {
+   "rho": 0.02,
+   "p": 0.6871,
+   "top_quartile_median": 0.0851,
+   "bottom_quartile_median": 0.0819
+  },
+  "jpeg_kb": {
+   "rho": 0.03,
+   "p": 0.5497,
+   "top_quartile_median": 46.6,
+   "bottom_quartile_median": 42.9
+  },
+  "saliency_concentration": {
+   "rho": 0.033,
+   "p": 0.5173,
+   "top_quartile_median": 0.197,
+   "bottom_quartile_median": 0.195
+  },
+  "focal_points": {
+   "rho": -0.03,
+   "p": 0.5535,
+   "top_quartile_median": 2.0,
+   "bottom_quartile_median": 2.0
+  },
+  "bottom_saliency": {
+   "rho": -0.039,
+   "p": 0.4325,
+   "top_quartile_median": 0.144,
+   "bottom_quartile_median": 0.145
+  },
+  "squint_contrast": {
+   "rho": -0.063,
+   "p": 0.2134,
+   "top_quartile_median": 19.34,
+   "bottom_quartile_median": 19.585
+  },
+  "faces": {
+   "rho": -0.072,
+   "p": 0.1582,
+   "top_quartile_median": 1.0,
+   "bottom_quartile_median": 1.0
+  },
+  "face_area_max": {
+   "rho": 0.012,
+   "p": 0.8071,
+   "top_quartile_median": 0.0156,
+   "bottom_quartile_median": 0.0183
+  },
+  "text_words": {
+   "rho": -0.06,
+   "p": 0.2394,
+   "top_quartile_median": 1.0,
+   "bottom_quartile_median": 1.0
+  },
+  "text_area": {
+   "rho": -0.083,
+   "p": 0.1036,
+   "top_quartile_median": 0.0018,
+   "bottom_quartile_median": 0.009
+  }
+ },
+ "correlations_recent": {
+  "brightness": {
+   "rho": -0.046,
+   "p": 0.6467
+  },
+  "contrast": {
+   "rho": -0.162,
+   "p": 0.112
+  },
+  "saturation": {
+   "rho": 0.171,
+   "p": 0.0943
+  },
+  "vivid_share": {
+   "rho": 0.126,
+   "p": 0.2161
+  },
+  "colorfulness": {
+   "rho": 0.096,
+   "p": 0.3495
+  },
+  "warm_share": {
+   "rho": -0.187,
+   "p": 0.0662
+  },
+  "hue_entropy": {
+   "rho": 0.154,
+   "p": 0.13
+  },
+  "palette_top2": {
+   "rho": -0.125,
+   "p": 0.2289
+  },
+  "edge_density": {
+   "rho": 0.013,
+   "p": 0.8963
+  },
+  "jpeg_kb": {
+   "rho": 0.024,
+   "p": 0.8197
+  },
+  "saliency_concentration": {
+   "rho": 0.188,
+   "p": 0.0711
+  },
+  "focal_points": {
+   "rho": -0.271,
+   "p": 0.0061
+  },
+  "bottom_saliency": {
+   "rho": -0.153,
+   "p": 0.1283
+  },
+  "squint_contrast": {
+   "rho": -0.197,
+   "p": 0.0491
+  },
+  "faces": {
+   "rho": -0.188,
+   "p": 0.0608
+  },
+  "face_area_max": {
+   "rho": -0.121,
+   "p": 0.2408
+  },
+  "text_words": {
+   "rho": 0.192,
+   "p": 0.0594
+  },
+  "text_area": {
+   "rho": 0.298,
+   "p": 0.0031
+  }
+ },
+ "by_year": {
+  "2016": {
+   "n": 38,
+   "brightness": 55.615,
+   "contrast": 28.215,
+   "saturation": 0.2375,
+   "vivid_share": 0.189,
+   "colorfulness": 50.32,
+   "warm_share": 0.7975,
+   "hue_entropy": 0.334,
+   "palette_top2": 0.651,
+   "edge_density": 0.0559,
+   "jpeg_kb": 36.15,
+   "saliency_concentration": 0.2145,
+   "focal_points": 2.5,
+   "bottom_saliency": 0.1335,
+   "squint_contrast": 19.575,
+   "faces": 0.0,
+   "face_area_max": 0.0,
+   "text_words": 2.0,
+   "text_area": 0.0575,
+   "share_with_face": 0.421,
+   "share_with_text": 0.763
+  },
+  "2017": {
+   "n": 40,
+   "brightness": 46.91,
+   "contrast": 26.695,
+   "saturation": 0.349,
+   "vivid_share": 0.297,
+   "colorfulness": 51.465,
+   "warm_share": 0.9065,
+   "hue_entropy": 0.385,
+   "palette_top2": 0.5615,
+   "edge_density": 0.0543,
+   "jpeg_kb": 35.35,
+   "saliency_concentration": 0.193,
+   "focal_points": 3.0,
+   "bottom_saliency": 0.149,
+   "squint_contrast": 21.61,
+   "faces": 1.0,
+   "face_area_max": 0.0088,
+   "text_words": 0.5,
+   "text_area": 0.0001,
+   "share_with_face": 0.525,
+   "share_with_text": 0.5
+  },
+  "2018": {
+   "n": 73,
+   "brightness": 51.77,
+   "contrast": 24.13,
+   "saturation": 0.285,
+   "vivid_share": 0.263,
+   "colorfulness": 51.9,
+   "warm_share": 0.462,
+   "hue_entropy": 0.492,
+   "palette_top2": 0.569,
+   "edge_density": 0.0834,
+   "jpeg_kb": 42.4,
+   "saliency_concentration": 0.194,
+   "focal_points": 2.0,
+   "bottom_saliency": 0.146,
+   "squint_contrast": 19.47,
+   "faces": 0.0,
+   "face_area_max": 0.0,
+   "text_words": 1.0,
+   "text_area": 0.0015,
+   "share_with_face": 0.425,
+   "share_with_text": 0.534
+  },
+  "2019": {
+   "n": 68,
+   "brightness": 53.505,
+   "contrast": 26.28,
+   "saturation": 0.3355,
+   "vivid_share": 0.371,
+   "colorfulness": 63.37,
+   "warm_share": 0.6525,
+   "hue_entropy": 0.5265,
+   "palette_top2": 0.566,
+   "edge_density": 0.0878,
+   "jpeg_kb": 46.95,
+   "saliency_concentration": 0.196,
+   "focal_points": 2.0,
+   "bottom_saliency": 0.1565,
+   "squint_contrast": 18.385,
+   "faces": 1.0,
+   "face_area_max": 0.0172,
+   "text_words": 1.0,
+   "text_area": 0.0069,
+   "share_with_face": 0.662,
+   "share_with_text": 0.529
+  },
+  "2020": {
+   "n": 45,
+   "brightness": 59.31,
+   "contrast": 25.87,
+   "saturation": 0.345,
+   "vivid_share": 0.396,
+   "colorfulness": 80.8,
+   "warm_share": 0.587,
+   "hue_entropy": 0.442,
+   "palette_top2": 0.55,
+   "edge_density": 0.1134,
+   "jpeg_kb": 51.4,
+   "saliency_concentration": 0.188,
+   "focal_points": 2.0,
+   "bottom_saliency": 0.142,
+   "squint_contrast": 19.04,
+   "faces": 1.0,
+   "face_area_max": 0.0734,
+   "text_words": 1.0,
+   "text_area": 0.0028,
+   "share_with_face": 0.822,
+   "share_with_text": 0.556
+  },
+  "2021": {
+   "n": 26,
+   "brightness": 56.375,
+   "contrast": 24.825,
+   "saturation": 0.383,
+   "vivid_share": 0.399,
+   "colorfulness": 87.24,
+   "warm_share": 0.5385,
+   "hue_entropy": 0.485,
+   "palette_top2": 0.5385,
+   "edge_density": 0.1198,
+   "jpeg_kb": 56.15,
+   "saliency_concentration": 0.187,
+   "focal_points": 2.5,
+   "bottom_saliency": 0.1525,
+   "squint_contrast": 18.765,
+   "faces": 1.0,
+   "face_area_max": 0.0857,
+   "text_words": 0.0,
+   "text_area": 0.0,
+   "share_with_face": 0.731,
+   "share_with_text": 0.385
+  },
+  "2022": {
+   "n": 15,
+   "brightness": 57.77,
+   "contrast": 24.11,
+   "saturation": 0.394,
+   "vivid_share": 0.473,
+   "colorfulness": 79.31,
+   "warm_share": 0.653,
+   "hue_entropy": 0.37,
+   "palette_top2": 0.539,
+   "edge_density": 0.113,
+   "jpeg_kb": 54.1,
+   "saliency_concentration": 0.188,
+   "focal_points": 3.0,
+   "bottom_saliency": 0.151,
+   "squint_contrast": 18.38,
+   "faces": 1.0,
+   "face_area_max": 0.1167,
+   "text_words": 1.0,
+   "text_area": 0.0026,
+   "share_with_face": 0.867,
+   "share_with_text": 0.6
+  },
+  "2023": {
+   "n": 17,
+   "brightness": 60.29,
+   "contrast": 24.34,
+   "saturation": 0.386,
+   "vivid_share": 0.473,
+   "colorfulness": 80.75,
+   "warm_share": 0.754,
+   "hue_entropy": 0.454,
+   "palette_top2": 0.524,
+   "edge_density": 0.1186,
+   "jpeg_kb": 58.3,
+   "saliency_concentration": 0.187,
+   "focal_points": 4.0,
+   "bottom_saliency": 0.157,
+   "squint_contrast": 17.52,
+   "faces": 1.0,
+   "face_area_max": 0.1056,
+   "text_words": 0.0,
+   "text_area": 0.0,
+   "share_with_face": 0.706,
+   "share_with_text": 0.471
+  },
+  "2024": {
+   "n": 22,
+   "brightness": 54.29,
+   "contrast": 24.105,
+   "saturation": 0.3705,
+   "vivid_share": 0.46,
+   "colorfulness": 67.98,
+   "warm_share": 0.632,
+   "hue_entropy": 0.369,
+   "palette_top2": 0.526,
+   "edge_density": 0.1253,
+   "jpeg_kb": 57.95,
+   "saliency_concentration": 0.199,
+   "focal_points": 3.0,
+   "bottom_saliency": 0.1485,
+   "squint_contrast": 18.515,
+   "faces": 1.0,
+   "face_area_max": 0.0579,
+   "text_words": 1.0,
+   "text_area": 0.0056,
+   "share_with_face": 0.727,
+   "share_with_text": 0.682
+  },
+  "2025": {
+   "n": 23,
+   "brightness": 55.0,
+   "contrast": 24.17,
+   "saturation": 0.433,
+   "vivid_share": 0.494,
+   "colorfulness": 82.08,
+   "warm_share": 0.644,
+   "hue_entropy": 0.483,
+   "palette_top2": 0.527,
+   "edge_density": 0.128,
+   "jpeg_kb": 59.7,
+   "saliency_concentration": 0.187,
+   "focal_points": 3.0,
+   "bottom_saliency": 0.148,
+   "squint_contrast": 17.76,
+   "faces": 1.0,
+   "face_area_max": 0.1438,
+   "text_words": 0.0,
+   "text_area": 0.0,
+   "share_with_face": 0.957,
+   "share_with_text": 0.478
+  },
+  "2026": {
+   "n": 22,
+   "brightness": 54.08,
+   "contrast": 24.145,
+   "saturation": 0.4125,
+   "vivid_share": 0.49,
+   "colorfulness": 77.535,
+   "warm_share": 0.6225,
+   "hue_entropy": 0.5085,
+   "palette_top2": 0.512,
+   "edge_density": 0.139,
+   "jpeg_kb": 59.15,
+   "saliency_concentration": 0.184,
+   "focal_points": 3.0,
+   "bottom_saliency": 0.149,
+   "squint_contrast": 17.125,
+   "faces": 1.0,
+   "face_area_max": 0.103,
+   "text_words": 1.0,
+   "text_area": 0.0037,
+   "share_with_face": 0.909,
+   "share_with_text": 0.591
+  }
+ },
+ "benchmark_all": {
+  "brightness": {
+   "p10": 38.206,
+   "p25": 45.83,
+   "p50": 54.06,
+   "p75": 61.09,
+   "p90": 66.89
+  },
+  "contrast": {
+   "p10": 19.686,
+   "p25": 22.74,
+   "p50": 25.22,
+   "p75": 28.06,
+   "p90": 31.48
+  },
+  "saturation": {
+   "p10": 0.1918,
+   "p25": 0.255,
+   "p50": 0.343,
+   "p75": 0.435,
+   "p90": 0.512
+  },
+  "vivid_share": {
+   "p10": 0.1188,
+   "p25": 0.22,
+   "p50": 0.365,
+   "p75": 0.517,
+   "p90": 0.6286
+  },
+  "colorfulness": {
+   "p10": 37.882,
+   "p25": 49.24,
+   "p50": 67.93,
+   "p75": 88.32,
+   "p90": 105.208
+  },
+  "warm_share": {
+   "p10": 0.1892,
+   "p25": 0.433,
+   "p50": 0.641,
+   "p75": 0.877,
+   "p90": 0.995
+  },
+  "hue_entropy": {
+   "p10": 0.1664,
+   "p25": 0.315,
+   "p50": 0.445,
+   "p75": 0.565,
+   "p90": 0.652
+  },
+  "palette_top2": {
+   "p10": 0.476,
+   "p25": 0.514,
+   "p50": 0.556,
+   "p75": 0.629,
+   "p90": 0.705
+  },
+  "edge_density": {
+   "p10": 0.0375,
+   "p25": 0.0601,
+   "p50": 0.0977,
+   "p75": 0.1351,
+   "p90": 0.169
+  },
+  "jpeg_kb": {
+   "p10": 28.96,
+   "p25": 37.9,
+   "p50": 50.0,
+   "p75": 60.2,
+   "p90": 67.7
+  },
+  "saliency_concentration": {
+   "p10": 0.1688,
+   "p25": 0.179,
+   "p50": 0.193,
+   "p75": 0.219,
+   "p90": 0.2514
+  },
+  "focal_points": {
+   "p10": 1.0,
+   "p25": 2.0,
+   "p50": 3.0,
+   "p75": 4.0,
+   "p90": 4.2
+  },
+  "bottom_saliency": {
+   "p10": 0.106,
+   "p25": 0.126,
+   "p50": 0.149,
+   "p75": 0.169,
+   "p90": 0.187
+  },
+  "squint_contrast": {
+   "p10": 13.6,
+   "p25": 15.99,
+   "p50": 18.63,
+   "p75": 21.72,
+   "p90": 25.408
+  },
+  "faces": {
+   "p10": 0.0,
+   "p25": 0.0,
+   "p50": 1.0,
+   "p75": 1.0,
+   "p90": 3.0
+  },
+  "face_area_max": {
+   "p10": 0.0,
+   "p25": 0.0,
+   "p50": 0.0244,
+   "p75": 0.107,
+   "p90": 0.1553
+  },
+  "text_words": {
+   "p10": 0.0,
+   "p25": 0.0,
+   "p50": 1.0,
+   "p75": 2.0,
+   "p90": 4.0
+  },
+  "text_area": {
+   "p10": 0.0,
+   "p25": 0.0,
+   "p50": 0.0026,
+   "p75": 0.0342,
+   "p90": 0.0835
+  }
+ },
+ "benchmark_recent": {
+  "brightness": {
+   "p10": 43.214,
+   "p25": 47.875,
+   "p50": 55.27,
+   "p75": 60.59,
+   "p90": 65.638
+  },
+  "contrast": {
+   "p10": 21.634,
+   "p25": 22.66,
+   "p50": 24.16,
+   "p75": 25.925,
+   "p90": 27.484
+  },
+  "saturation": {
+   "p10": 0.287,
+   "p25": 0.33,
+   "p50": 0.396,
+   "p75": 0.4675,
+   "p90": 0.5372
+  },
+  "vivid_share": {
+   "p10": 0.2954,
+   "p25": 0.3705,
+   "p50": 0.474,
+   "p75": 0.582,
+   "p90": 0.659
+  },
+  "colorfulness": {
+   "p10": 50.634,
+   "p25": 64.915,
+   "p50": 78.51,
+   "p75": 93.24,
+   "p90": 111.402
+  },
+  "warm_share": {
+   "p10": 0.3072,
+   "p25": 0.484,
+   "p50": 0.641,
+   "p75": 0.8295,
+   "p90": 0.9924
+  },
+  "hue_entropy": {
+   "p10": 0.2344,
+   "p25": 0.34,
+   "p50": 0.442,
+   "p75": 0.532,
+   "p90": 0.5876
+  },
+  "palette_top2": {
+   "p10": 0.4668,
+   "p25": 0.479,
+   "p50": 0.527,
+   "p75": 0.571,
+   "p90": 0.6114
+  },
+  "edge_density": {
+   "p10": 0.0895,
+   "p25": 0.1056,
+   "p50": 0.1275,
+   "p75": 0.1482,
+   "p90": 0.1735
+  },
+  "jpeg_kb": {
+   "p10": 47.88,
+   "p25": 51.6,
+   "p50": 57.3,
+   "p75": 64.65,
+   "p90": 68.46
+  },
+  "saliency_concentration": {
+   "p10": 0.1708,
+   "p25": 0.178,
+   "p50": 0.188,
+   "p75": 0.2065,
+   "p90": 0.2322
+  },
+  "focal_points": {
+   "p10": 1.0,
+   "p25": 2.0,
+   "p50": 3.0,
+   "p75": 4.0,
+   "p90": 5.0
+  },
+  "bottom_saliency": {
+   "p10": 0.1208,
+   "p25": 0.135,
+   "p50": 0.15,
+   "p75": 0.171,
+   "p90": 0.189
+  },
+  "squint_contrast": {
+   "p10": 13.572,
+   "p25": 15.575,
+   "p50": 17.84,
+   "p75": 19.715,
+   "p90": 21.664
+  },
+  "faces": {
+   "p10": 0.0,
+   "p25": 1.0,
+   "p50": 1.0,
+   "p75": 2.0,
+   "p90": 4.0
+  },
+  "face_area_max": {
+   "p10": 0.0,
+   "p25": 0.0251,
+   "p50": 0.1043,
+   "p75": 0.1526,
+   "p90": 0.1782
+  },
+  "text_words": {
+   "p10": 0.0,
+   "p25": 0.0,
+   "p50": 1.0,
+   "p75": 1.5,
+   "p90": 2.0
+  },
+  "text_area": {
+   "p10": 0.0,
+   "p25": 0.0,
+   "p50": 0.0016,
+   "p75": 0.0215,
+   "p90": 0.038
+  }
+ },
+ "n_recent": 99
+}

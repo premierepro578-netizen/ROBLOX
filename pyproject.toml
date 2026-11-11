@@ -21,6 +21,9 @@ transcripts = ["youtube-transcript-api>=1.0"]
 # Claude-backed extraction (`bpe analyze --extractor claude`).
 llm = ["anthropic>=2.0"]
 dev = ["pytest>=8"]
+# Thumbnail/icon analysis (`bpe thumbs`). Text detection also needs the tesseract binary.
+# OpenCV is pinned below 5: 5.x moved the Haar face cascades out of the main package.
+visual = ["numpy>=1.26", "pillow>=10", "opencv-python-headless>=4.9,<5", "pytesseract>=0.3.10"]
 
 [project.scripts]
 bpe = "blueprint_engine.cli:main"
