@@ -1,0 +1,2395 @@
+{
+ "generated_at": "2026-11-11 07:21 UTC",
+ "extractor": "heuristic",
+ "totals": {
+  "sources": 33,
+  "by_kind": {
+   "youtube": 33
+  },
+  "words_analyzed": 99150,
+  "insights": 65,
+  "transcript_origins": {
+   "auto-captions": 31,
+   "manual-captions": 2
+  }
+ },
+ "sources": [
+  {
+   "id": "yt:GNs6wgwoZLM",
+   "kind": "youtube",
+   "title": "Car Crash Studio is Diabolical",
+   "author": "Sketch",
+   "url": "https://www.youtube.com/watch?v=GNs6wgwoZLM",
+   "published": "2025-12-17",
+   "views": 5124390,
+   "likes": 57657,
+   "followers": 5540000,
+   "duration_s": 644,
+   "score": 1.0,
+   "score_breakdown": {
+    "views_per_day": 15575.7,
+    "age_days": 329,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 0
+  },
+  {
+   "id": "yt:T5OH2F6_ik0",
+   "kind": "youtube",
+   "title": "I Spent 2 Years Building the Roblox Tower Defense Game I Wanted to Play",
+   "author": "Superstitic",
+   "url": "https://www.youtube.com/watch?v=T5OH2F6_ik0",
+   "published": "2026-10-17",
+   "views": 394266,
+   "likes": 8999,
+   "followers": 4270,
+   "duration_s": 665,
+   "score": 1.0,
+   "score_breakdown": {
+    "views_per_day": 15770.6,
+    "age_days": 25,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 1
+  },
+  {
+   "id": "yt:G9Ws9Rmi_4M",
+   "kind": "youtube",
+   "title": "ROBLOX MEGA RAMP FOR LUCKY BLOCKS..",
+   "author": "FoltynPlays",
+   "url": "https://www.youtube.com/watch?v=G9Ws9Rmi_4M",
+   "published": "2026-09-21",
+   "views": 540201,
+   "likes": 6379,
+   "followers": 5940000,
+   "duration_s": 883,
+   "score": 0.9212,
+   "score_breakdown": {
+    "views_per_day": 10592.2,
+    "age_days": 51,
+    "dev_intent": 0.6
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 0
+  },
+  {
+   "id": "yt:1VRu8LKq-Aw",
+   "kind": "youtube",
+   "title": "This Roblox Developer Can't Take Criticism",
+   "author": "Rickmonas90",
+   "url": "https://www.youtube.com/watch?v=1VRu8LKq-Aw",
+   "published": "2026-09-27",
+   "views": 502215,
+   "likes": 11778,
+   "followers": 20300,
+   "duration_s": 625,
+   "score": 0.9066,
+   "score_breakdown": {
+    "views_per_day": 11160.3,
+    "age_days": 45,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "manual-captions",
+   "insights": 1
+  },
+  {
+   "id": "yt:b715CMdnbSI",
+   "kind": "youtube",
+   "title": "Can Opus 5.5 Make A Viral Roblox Game In 24 Hours",
+   "author": "Dumbledore",
+   "url": "https://www.youtube.com/watch?v=b715CMdnbSI",
+   "published": "2026-10-18",
+   "views": 228367,
+   "likes": 3416,
+   "followers": 3180,
+   "duration_s": 750,
+   "score": 0.8635,
+   "score_breakdown": {
+    "views_per_day": 9515.3,
+    "age_days": 24,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 0
+  },
+  {
+   "id": "yt:8xgnm6SynH4",
+   "kind": "youtube",
+   "title": "I Spent 24 Hours With Roblox Millionaires",
+   "author": "Starter Story",
+   "url": "https://www.youtube.com/watch?v=8xgnm6SynH4",
+   "published": "2025-04-23",
+   "views": 4388706,
+   "likes": 87242,
+   "followers": 899000,
+   "duration_s": 1230,
+   "score": 0.8078,
+   "score_breakdown": {
+    "views_per_day": 7740.2,
+    "age_days": 567,
+    "dev_intent": 0.6
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 3
+  },
+  {
+   "id": "yt:KXAYJ5TnKH4",
+   "kind": "youtube",
+   "title": "How To MAKE a ROBLOX GAME on MOBILE...",
+   "author": "Reckless - Roblox",
+   "url": "https://www.youtube.com/watch?v=KXAYJ5TnKH4",
+   "published": "2024-05-14",
+   "views": 4942225,
+   "likes": 135435,
+   "followers": 1960000,
+   "duration_s": 480,
+   "score": 0.7118,
+   "score_breakdown": {
+    "views_per_day": 5425.1,
+    "age_days": 911,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 2
+  },
+  {
+   "id": "yt:uJZ7yUo9LUQ",
+   "kind": "youtube",
+   "title": "Playing BeamNG Copies on Roblox",
+   "author": "velvet4k",
+   "url": "https://www.youtube.com/watch?v=uJZ7yUo9LUQ",
+   "published": "2026-03-28",
+   "views": 819949,
+   "likes": 10074,
+   "followers": 120000,
+   "duration_s": 621,
+   "score": 0.7003,
+   "score_breakdown": {
+    "views_per_day": 3596.3,
+    "age_days": 228,
+    "dev_intent": 0.6
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 0
+  },
+  {
+   "id": "yt:ltbZzXRrDF8",
+   "kind": "youtube",
+   "title": "How To Make An ENTIRE Roblox Game With AI - Full Guide",
+   "author": "GuideRealm",
+   "url": "https://www.youtube.com/watch?v=ltbZzXRrDF8",
+   "published": "2026-10-17",
+   "views": 123637,
+   "likes": 1445,
+   "followers": 2120000,
+   "duration_s": 489,
+   "score": 0.6868,
+   "score_breakdown": {
+    "views_per_day": 4945.5,
+    "age_days": 25,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 2
+  },
+  {
+   "id": "yt:9MUgLaF22Yo",
+   "kind": "youtube",
+   "title": "Roblox Studio Basics - Roblox Beginners Scripting Tutorial #1 (2025)",
+   "author": "BrawlDev",
+   "url": "https://www.youtube.com/watch?v=9MUgLaF22Yo",
+   "published": "2024-06-16",
+   "views": 3890144,
+   "likes": 82478,
+   "followers": 213000,
+   "duration_s": 686,
+   "score": 0.6571,
+   "score_breakdown": {
+    "views_per_day": 4430.7,
+    "age_days": 878,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 1
+  },
+  {
+   "id": "yt:ODtajhhnw5c",
+   "kind": "youtube",
+   "title": "Flying 8,129,364 FEET in Roblox!",
+   "author": "RoBros",
+   "url": "https://www.youtube.com/watch?v=ODtajhhnw5c",
+   "published": "2025-05-02",
+   "views": 1478625,
+   "likes": 10115,
+   "followers": 2030000,
+   "duration_s": 670,
+   "score": 0.6379,
+   "score_breakdown": {
+    "views_per_day": 2649.9,
+    "age_days": 558,
+    "dev_intent": 0.6
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 0
+  },
+  {
+   "id": "yt:J6JBEsGL0Qw",
+   "kind": "youtube",
+   "title": "I made a scary game on Roblox in 24 hours...",
+   "author": "Serge",
+   "url": "https://www.youtube.com/watch?v=J6JBEsGL0Qw",
+   "published": "2023-12-18",
+   "views": 3734059,
+   "likes": 80922,
+   "followers": 198000,
+   "duration_s": 482,
+   "score": 0.5955,
+   "score_breakdown": {
+    "views_per_day": 3526.0,
+    "age_days": 1059,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 1
+  },
+  {
+   "id": "yt:LZOohZHsJus",
+   "kind": "youtube",
+   "title": "My Roblox Game Makes $119,300/mo (38K CCU, here's how)",
+   "author": "Tizzy RBLX",
+   "url": "https://www.youtube.com/watch?v=LZOohZHsJus",
+   "published": "2026-07-20",
+   "views": 355229,
+   "likes": 10418,
+   "followers": 23400,
+   "duration_s": 1383,
+   "score": 0.5621,
+   "score_breakdown": {
+    "views_per_day": 3116.0,
+    "age_days": 114,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 2
+  },
+  {
+   "id": "yt:aFtWlNEGGdE",
+   "kind": "youtube",
+   "title": "I Drive a Truck Off the BIGGEST Ramp on Roblox BUT It Went WRONG Mid Air...",
+   "author": "Elitelupus",
+   "url": "https://www.youtube.com/watch?v=aFtWlNEGGdE",
+   "published": "2026-09-20",
+   "views": 90370,
+   "likes": 567,
+   "followers": 3010000,
+   "duration_s": 1047,
+   "score": 0.5516,
+   "score_breakdown": {
+    "views_per_day": 1737.9,
+    "age_days": 52,
+    "dev_intent": 0.6
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 0
+  },
+  {
+   "id": "yt:8vxhtY2v0O4",
+   "kind": "youtube",
+   "title": "HOW TO CREATE A ROBLOX GAME FROM SCRATCH 2026!!!😎",
+   "author": "GDBLOOX",
+   "url": "https://www.youtube.com/watch?v=8vxhtY2v0O4",
+   "published": "2026-08-01",
+   "views": 282578,
+   "likes": 5936,
+   "followers": 911000,
+   "duration_s": 765,
+   "score": 0.5303,
+   "score_breakdown": {
+    "views_per_day": 2770.4,
+    "age_days": 102,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "manual-captions",
+   "insights": 0
+  },
+  {
+   "id": "yt:-QSmtYVMRH4",
+   "kind": "youtube",
+   "title": "How to make your FIRST Roblox Game (Make Robux)",
+   "author": "CodeBro29",
+   "url": "https://www.youtube.com/watch?v=-QSmtYVMRH4",
+   "published": "2024-01-01",
+   "views": 2846852,
+   "likes": 45410,
+   "followers": 121000,
+   "duration_s": 1789,
+   "score": 0.5258,
+   "score_breakdown": {
+    "views_per_day": 2724.3,
+    "age_days": 1045,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 5
+  },
+  {
+   "id": "yt:v8vby3iOOX4",
+   "kind": "youtube",
+   "title": "How To Make Your First Roblox Game in 2026 (With AI)",
+   "author": "DitchyDevelopments",
+   "url": "https://www.youtube.com/watch?v=v8vby3iOOX4",
+   "published": "2026-06-11",
+   "views": 390799,
+   "likes": 6026,
+   "followers": 23300,
+   "duration_s": 323,
+   "score": 0.5084,
+   "score_breakdown": {
+    "views_per_day": 2554.2,
+    "age_days": 153,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 5
+  },
+  {
+   "id": "yt:F9sfnpkzcPw",
+   "kind": "youtube",
+   "title": "Can I Make a VIRAL TYCOON in 24 HOURS?",
+   "author": "Duckable",
+   "url": "https://www.youtube.com/watch?v=F9sfnpkzcPw",
+   "published": "2025-11-21",
+   "views": 830666,
+   "likes": 18675,
+   "followers": 193000,
+   "duration_s": 1228,
+   "score": 0.4847,
+   "score_breakdown": {
+    "views_per_day": 2339.9,
+    "age_days": 355,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 6
+  },
+  {
+   "id": "yt:vUN2cJD4mUk",
+   "kind": "youtube",
+   "title": "How I Learned To Make Roblox Games in a Week",
+   "author": "BinzuDev",
+   "url": "https://www.youtube.com/watch?v=vUN2cJD4mUk",
+   "published": "2024-08-13",
+   "views": 1741166,
+   "likes": 55248,
+   "followers": 46400,
+   "duration_s": 2378,
+   "score": 0.4585,
+   "score_breakdown": {
+    "views_per_day": 2123.4,
+    "age_days": 820,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 8
+  },
+  {
+   "id": "yt:_0JHT4BivZc",
+   "kind": "youtube",
+   "title": "Roblox Car Crash Studio Is HILARIOUS!",
+   "author": "AwstynC",
+   "url": "https://www.youtube.com/watch?v=_0JHT4BivZc",
+   "published": "2026-01-27",
+   "views": 280690,
+   "likes": 3158,
+   "followers": 3250,
+   "duration_s": 617,
+   "score": 0.4334,
+   "score_breakdown": {
+    "views_per_day": 974.6,
+    "age_days": 288,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 0
+  },
+  {
+   "id": "yt:Dp7vw20e-fA",
+   "kind": "youtube",
+   "title": "How FAST Can I Make a Roblox Game?",
+   "author": "Duckable",
+   "url": "https://www.youtube.com/watch?v=Dp7vw20e-fA",
+   "published": "2025-12-26",
+   "views": 559027,
+   "likes": 10245,
+   "followers": 193000,
+   "duration_s": 1106,
+   "score": 0.4059,
+   "score_breakdown": {
+    "views_per_day": 1747.0,
+    "age_days": 320,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 1
+  },
+  {
+   "id": "yt:JRqac84Ckcg",
+   "kind": "youtube",
+   "title": "I Tried Roblox's CAR CRASH STUDIO...",
+   "author": "bunhat",
+   "url": "https://www.youtube.com/watch?v=JRqac84Ckcg",
+   "published": "2026-01-05",
+   "views": 245594,
+   "likes": 3214,
+   "followers": 750000,
+   "duration_s": 1329,
+   "score": 0.3911,
+   "score_breakdown": {
+    "views_per_day": 792.2,
+    "age_days": 310,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 0
+  },
+  {
+   "id": "yt:LWL5QUdSQiA",
+   "kind": "youtube",
+   "title": "All Of Roblox Lua (Luau) in 21 Minutes",
+   "author": "KatanaBladeHD",
+   "url": "https://www.youtube.com/watch?v=LWL5QUdSQiA",
+   "published": "2025-12-13",
+   "views": 547753,
+   "likes": 23929,
+   "followers": 5720,
+   "duration_s": 1248,
+   "score": 0.3896,
+   "score_breakdown": {
+    "views_per_day": 1644.9,
+    "age_days": 333,
+    "dev_intent": 0.6
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 0
+  },
+  {
+   "id": "yt:H4X8L5namhA",
+   "kind": "youtube",
+   "title": "You CAN Script. Let me PROVE IT to you..",
+   "author": "script_ing",
+   "url": "https://www.youtube.com/watch?v=H4X8L5namhA",
+   "published": "2025-03-19",
+   "views": 958967,
+   "likes": 40552,
+   "followers": 37200,
+   "duration_s": 2118,
+   "score": 0.381,
+   "score_breakdown": {
+    "views_per_day": 1593.0,
+    "age_days": 602,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 2
+  },
+  {
+   "id": "yt:GE6Z1n57yDU",
+   "kind": "youtube",
+   "title": "How to ACTUALLY LEARN to Script in Roblox Studio (5 Steps to learn)",
+   "author": "MikoLikesHat",
+   "url": "https://www.youtube.com/watch?v=GE6Z1n57yDU",
+   "published": "2025-06-15",
+   "views": 793168,
+   "likes": 39865,
+   "followers": 16400,
+   "duration_s": 786,
+   "score": 0.3724,
+   "score_breakdown": {
+    "views_per_day": 1543.1,
+    "age_days": 514,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 7
+  },
+  {
+   "id": "yt:fjlOaEALWmg",
+   "kind": "youtube",
+   "title": "How I Made a Viral Roblox Game",
+   "author": "janisjanis01",
+   "url": "https://www.youtube.com/watch?v=fjlOaEALWmg",
+   "published": "2026-08-02",
+   "views": 141023,
+   "likes": 4154,
+   "followers": 140000,
+   "duration_s": 774,
+   "score": 0.3454,
+   "score_breakdown": {
+    "views_per_day": 1396.3,
+    "age_days": 101,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 7
+  },
+  {
+   "id": "yt:WFyrlstSDe4",
+   "kind": "youtube",
+   "title": "I Accidentally Made a Viral Roblox Game",
+   "author": "Laugh",
+   "url": "https://www.youtube.com/watch?v=WFyrlstSDe4",
+   "published": "2025-10-01",
+   "views": 538854,
+   "likes": 15622,
+   "followers": 231000,
+   "duration_s": 915,
+   "score": 0.3317,
+   "score_breakdown": {
+    "views_per_day": 1327.2,
+    "age_days": 406,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 5
+  },
+  {
+   "id": "yt:UE_4mNwcXco",
+   "kind": "youtube",
+   "title": "I Tried Learning Roblox Scripting In 7 Days",
+   "author": "DeHapy",
+   "url": "https://www.youtube.com/watch?v=UE_4mNwcXco",
+   "published": "2025-11-22",
+   "views": 466708,
+   "likes": 9287,
+   "followers": 159000,
+   "duration_s": 1003,
+   "score": 0.3299,
+   "score_breakdown": {
+    "views_per_day": 1318.4,
+    "age_days": 354,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 1
+  },
+  {
+   "id": "yt:vkEXLmRAQgs",
+   "kind": "youtube",
+   "title": "Make Your Roblox Game Look 10x Better With Lighting",
+   "author": "Develuper",
+   "url": "https://www.youtube.com/watch?v=vkEXLmRAQgs",
+   "published": "2026-04-21",
+   "views": 251095,
+   "likes": 11272,
+   "followers": 24200,
+   "duration_s": 277,
+   "score": 0.3114,
+   "score_breakdown": {
+    "views_per_day": 1230.9,
+    "age_days": 204,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 0
+  },
+  {
+   "id": "yt:-5OOovmkJss",
+   "kind": "youtube",
+   "title": "ABSOLUTE Beginner Basics.. Roblox Studio For Noobs 2025",
+   "author": "RoBuilder",
+   "url": "https://www.youtube.com/watch?v=-5OOovmkJss",
+   "published": "2025-12-11",
+   "views": 408338,
+   "likes": 6464,
+   "followers": 391000,
+   "duration_s": 541,
+   "score": 0.3087,
+   "score_breakdown": {
+    "views_per_day": 1218.9,
+    "age_days": 335,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 1
+  },
+  {
+   "id": "yt:xnlaYLnCtFc",
+   "kind": "youtube",
+   "title": "Watch this before making ROBLOX Games",
+   "author": "waveshine",
+   "url": "https://www.youtube.com/watch?v=xnlaYLnCtFc",
+   "published": "2025-08-04",
+   "views": 563681,
+   "likes": 28404,
+   "followers": 24100,
+   "duration_s": 602,
+   "score": 0.3078,
+   "score_breakdown": {
+    "views_per_day": 1214.8,
+    "age_days": 464,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 2
+  },
+  {
+   "id": "yt:Ht6ZfibXpDs",
+   "kind": "youtube",
+   "title": "How To Make A Combat System In Roblox Studio [BEGINNER TUTORIAL]",
+   "author": "VuukStudios",
+   "url": "https://www.youtube.com/watch?v=Ht6ZfibXpDs",
+   "published": "2024-09-24",
+   "views": 918178,
+   "likes": 23339,
+   "followers": 34300,
+   "duration_s": 1970,
+   "score": 0.3,
+   "score_breakdown": {
+    "views_per_day": 1180.2,
+    "age_days": 778,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 2
+  },
+  {
+   "id": "yt:xuHKFOv4g8I",
+   "kind": "youtube",
+   "title": "Making A Roblox Slot Car in 15 Minutes",
+   "author": "rdvarney22",
+   "url": "https://www.youtube.com/watch?v=xuHKFOv4g8I",
+   "published": "2025-12-20",
+   "views": 165266,
+   "likes": 5944,
+   "followers": 6120,
+   "duration_s": 925,
+   "score": 0.3,
+   "score_breakdown": {
+    "views_per_day": 507.0,
+    "age_days": 326,
+    "dev_intent": 1.0
+   },
+   "pillars": [],
+   "transcript_origin": "auto-captions",
+   "insights": 0
+  }
+ ],
+ "pillars": [
+  {
+   "pillar": "core_loop",
+   "label": "Core gameplay loop",
+   "focus": true,
+   "sources_analyzed": 5,
+   "insights": 7,
+   "mechanics": [
+    {
+     "pillar": "core_loop",
+     "mechanic": "progression",
+     "label": "Progression & pacing",
+     "priority": "P0",
+     "weight": 1.628,
+     "support": 3,
+     "media_support": 3,
+     "doc_support": [],
+     "consensus": 0.6,
+     "n_insights": 3,
+     "evidence": [
+      {
+       "source_id": "yt:ltbZzXRrDF8",
+       "title": "How To Make An ENTIRE Roblox Game With AI - Full Guide",
+       "author": "GuideRealm",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=ltbZzXRrDF8&t=452s",
+       "quote": "You can also adjust the upgrade prices and income rates to make sure progression feels rewarding without becoming too easy or too slow.",
+       "start": 452.52,
+       "actionability": 0.693,
+       "source_score": 0.6868,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:vUN2cJD4mUk",
+       "title": "How I Learned To Make Roblox Games in a Week",
+       "author": "BinzuDev",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=vUN2cJD4mUk&t=30s",
+       "quote": "of the challenge and at the end I'll give my thoughts on the engine and I'll explain whether or not I think you should learn it depending on your skill level and goals and if you already know that you",
+       "start": 30.6,
+       "actionability": 0.68,
+       "source_score": 0.4585,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:fjlOaEALWmg",
+       "title": "How I Made a Viral Roblox Game",
+       "author": "janisjanis01",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=fjlOaEALWmg&t=182s",
+       "quote": "Make a starter pack that helps with progression. Add some limited-time items.",
+       "start": 182.64,
+       "actionability": 0.517,
+       "source_score": 0.3454,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Model cost and reward curves in a spreadsheet first; target a predictable time-to-next-upgrade at each stage.",
+       "Show the next unlock and progress toward it permanently on the HUD.",
+       "Re-tune curves from analytics (progression/economy events), not intuition."
+      ],
+      "apis": [
+       "AnalyticsService:LogEconomyEvent",
+       "AnalyticsService custom events for level-ups"
+      ],
+      "kpis": [
+       "Median time to each milestone",
+       "Drop-off by level",
+       "Sink/source ratio of soft currency"
+      ],
+      "pitfalls": [
+       "Exponential costs with linear rewards (a hidden wall)",
+       "No visible next goal"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "core_loop",
+     "mechanic": "loop_structure",
+     "label": "Action -> reward -> upgrade cycle",
+     "priority": "P1",
+     "weight": 0.927,
+     "support": 2,
+     "media_support": 2,
+     "doc_support": [],
+     "consensus": 0.4,
+     "n_insights": 3,
+     "evidence": [
+      {
+       "source_id": "yt:v8vby3iOOX4",
+       "title": "How To Make Your First Roblox Game in 2026 (With AI)",
+       "author": "DitchyDevelopments",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=v8vby3iOOX4&t=136s",
+       "quote": "If you're making a simulator, make sure the gameplay loop works. Or even for a horror game, just start small and then expand.",
+       "start": 136.8,
+       "actionability": 0.52,
+       "source_score": 0.5084,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:WFyrlstSDe4",
+       "title": "I Accidentally Made a Viral Roblox Game",
+       "author": "Laugh",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=WFyrlstSDe4&t=591s",
+       "quote": "And you need to be original. You need to make an original gameplay loop, something to stand out.",
+       "start": 591.2,
+       "actionability": 0.52,
+       "source_score": 0.3317,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Write the loop as a single sentence (verb -> reward -> spend -> stronger verb) and make every system feed it.",
+       "Keep the minute-to-minute action responsive on its own; the reward/upgrade layer amplifies a fun verb, it cannot replace one.",
+       "Make one full loop completable within the first minute, then lengthen loops gradually."
+      ],
+      "apis": [
+       "DataStoreService (UpdateAsync) for currency/upgrade persistence",
+       "RemoteEvents with server-side validation"
+      ],
+      "kpis": [
+       "Loops completed per session",
+       "Average session length",
+       "D1 retention"
+      ],
+      "pitfalls": [
+       "Rewards that do not change how the next loop plays",
+       "Trusting client-reported rewards (exploitable)"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "core_loop",
+     "mechanic": "concept",
+     "label": "Concept & hook",
+     "priority": "P1",
+     "weight": 0.879,
+     "support": 2,
+     "media_support": 2,
+     "doc_support": [],
+     "consensus": 0.4,
+     "n_insights": 3,
+     "evidence": [
+      {
+       "source_id": "yt:WFyrlstSDe4",
+       "title": "I Accidentally Made a Viral Roblox Game",
+       "author": "Laugh",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=WFyrlstSDe4&t=591s",
+       "quote": "And you need to be original. You need to make an original gameplay loop, something to stand out.",
+       "start": 591.2,
+       "actionability": 0.52,
+       "source_score": 0.3317,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:vUN2cJD4mUk",
+       "title": "How I Learned To Make Roblox Games in a Week",
+       "author": "BinzuDev",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=vUN2cJD4mUk&t=1013s",
+       "quote": "so earlier I did say that I wouldn't try to make the game idea I had",
+       "start": 1013.92,
+       "actionability": 0.493,
+       "source_score": 0.4585,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Validate the hook before building systems: can the idea be understood from the icon and title in 2 seconds?",
+       "Study the top games in the genre; ship the genre's expected loop, then differentiate on one axis."
+      ],
+      "apis": [],
+      "kpis": [
+       "Thumbnail click-through rate",
+       "First-play bounce rate"
+      ],
+      "pitfalls": [
+       "Novelty with no repeatable loop",
+       "Copying a trend after it has peaked"
+      ]
+     },
+     "stale_flags": []
+    }
+   ]
+  },
+  {
+   "pillar": "retention",
+   "label": "Retention mechanics",
+   "focus": true,
+   "sources_analyzed": 11,
+   "insights": 17,
+   "mechanics": [
+    {
+     "pillar": "retention",
+     "mechanic": "retention_kpis",
+     "label": "Retention KPIs & churn",
+     "priority": "P0",
+     "weight": 1.686,
+     "support": 4,
+     "media_support": 4,
+     "doc_support": [],
+     "consensus": 0.364,
+     "n_insights": 5,
+     "evidence": [
+      {
+       "source_id": "yt:LZOohZHsJus",
+       "title": "My Roblox Game Makes $119,300/mo (38K CCU, here's how)",
+       "author": "Tizzy RBLX",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=LZOohZHsJus&t=965s",
+       "quote": "All right? You want to have a strong curiosity hook, strong reason to come back tomorrow.",
+       "start": 965.96,
+       "actionability": 0.533,
+       "source_score": 0.5621,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:xnlaYLnCtFc",
+       "title": "Watch this before making ROBLOX Games",
+       "author": "waveshine",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=xnlaYLnCtFc&t=65s",
+       "quote": "You need to understand marketing, game design, retention, monetization, balancing, psychology, and more. It's not a get-richqu scheme.",
+       "start": 65.36,
+       "actionability": 0.617,
+       "source_score": 0.3078,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:vUN2cJD4mUk",
+       "title": "How I Learned To Make Roblox Games in a Week",
+       "author": "BinzuDev",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=vUN2cJD4mUk&t=1323s",
+       "quote": "finally had something that started to look like a game now I also wanted to have a high score value that would get saved when you quit the game and come back and in order to do that you need to use what Roblox calls …",
+       "start": 1323.28,
+       "actionability": 0.643,
+       "source_score": 0.4585,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:WFyrlstSDe4",
+       "title": "I Accidentally Made a Viral Roblox Game",
+       "author": "Laugh",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=WFyrlstSDe4&t=438s",
+       "quote": "Day one retention is how many people play the game and then come back the next day.",
+       "start": 438.28,
+       "actionability": 0.35,
+       "source_score": 0.3317,
+       "metrics": [
+        "Day one retention is how"
+       ],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [
+      "Day one retention is how",
+      "Day seven retention is how",
+      "then come back 7 days later"
+     ],
+     "playbook": {
+      "build": [
+       "Track D1/D7/D30 by new-user cohort in the Retention dashboard; annotate every update date.",
+       "Pair retention with playtime and funnel data to locate where players quit."
+      ],
+      "apis": [
+       "Creator Hub Analytics: Retention, Engagement",
+       "AnalyticsService custom events"
+      ],
+      "kpis": [
+       "D1, D7, D30 retention",
+       "Average playtime per DAU",
+       "First-play bounce rate"
+      ],
+      "pitfalls": [
+       "Reading aggregate retention without cohorts",
+       "Changing several systems at once (no attribution)"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "retention",
+     "mechanic": "social",
+     "label": "Social play & friends",
+     "priority": "P0",
+     "weight": 1.637,
+     "support": 3,
+     "media_support": 3,
+     "doc_support": [],
+     "consensus": 0.273,
+     "n_insights": 3,
+     "evidence": [
+      {
+       "source_id": "yt:8xgnm6SynH4",
+       "title": "I Spent 24 Hours With Roblox Millionaires",
+       "author": "Starter Story",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=8xgnm6SynH4&t=798s",
+       "quote": "So, yeah, I need to be clickable, social, and replayable. That's the formula I could give you, but it's probably going to take you a few attempts anyway to get a hit game if you want to hit a game.",
+       "start": 798.56,
+       "actionability": 0.467,
+       "source_score": 0.8078,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:fjlOaEALWmg",
+       "title": "How I Made a Viral Roblox Game",
+       "author": "janisjanis01",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=fjlOaEALWmg&t=204s",
+       "quote": "Make sure to test it out with your friends and see if it's any fun.",
+       "start": 204.8,
+       "actionability": 0.717,
+       "source_score": 0.3454,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:H4X8L5namhA",
+       "title": "You CAN Script. Let me PROVE IT to you..",
+       "author": "script_ing",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=H4X8L5namhA&t=932s",
+       "quote": "now you my friend go ahead and code it let's see what you come up with I'm going to give you 5 Seconds you can go ahead and pause the video and take as long as you need",
+       "start": 932.88,
+       "actionability": 0.817,
+       "source_score": 0.381,
+       "metrics": [
+        "to give you 5 Seconds you can go"
+       ],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [
+      "to give you 5 Seconds you can go"
+     ],
+     "playbook": {
+      "build": [
+       "Reward playing with friends (shared bonuses, co-op objectives) and make inviting one tap.",
+       "Give players something to show off to others in the same server."
+      ],
+      "apis": [
+       "SocialService:PromptGameInvite",
+       "Players:GetFriendsAsync",
+       "TextChatService"
+      ],
+      "kpis": [
+       "% sessions with a friend",
+       "Invites sent per DAU",
+       "Retention of social vs solo players"
+      ],
+      "pitfalls": [
+       "Invite spam prompts",
+       "Trading without scam protection"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "retention",
+     "mechanic": "quests",
+     "label": "Quests, tasks & achievements",
+     "priority": "P0",
+     "weight": 1.609,
+     "support": 3,
+     "media_support": 3,
+     "doc_support": [],
+     "consensus": 0.273,
+     "n_insights": 4,
+     "evidence": [
+      {
+       "source_id": "yt:1VRu8LKq-Aw",
+       "title": "This Roblox Developer Can't Take Criticism",
+       "author": "Rickmonas90",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=1VRu8LKq-Aw&t=301s",
+       "quote": "But even then, the point is that this is too hard for the first quest in the game.",
+       "start": 301.78,
+       "actionability": 0.467,
+       "source_score": 0.9066,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:vUN2cJD4mUk",
+       "title": "How I Learned To Make Roblox Games in a Week",
+       "author": "BinzuDev",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=vUN2cJD4mUk&t=30s",
+       "quote": "of the challenge and at the end I'll give my thoughts on the engine and I'll explain whether or not I think you should learn it depending on your skill level and goals and if you already know that you",
+       "start": 30.6,
+       "actionability": 0.68,
+       "source_score": 0.4585,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:F9sfnpkzcPw",
+       "title": "Can I Make a VIRAL TYCOON in 24 HOURS?",
+       "author": "Duckable",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=F9sfnpkzcPw&t=797s",
+       "quote": "I knew that there was only one way to try and recover this challenge.",
+       "start": 797.6,
+       "actionability": 0.467,
+       "source_score": 0.4847,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Rotate daily and weekly quests that point at the core loop and at under-used features.",
+       "Use badges for one-time milestones that are visible on the profile."
+      ],
+      "apis": [
+       "BadgeService",
+       "DataStoreService for quest state",
+       "AnalyticsService:LogFunnelStepEvent for quest chains"
+      ],
+      "kpis": [
+       "Quest completion rate",
+       "Feature adoption after quest exposure"
+      ],
+      "pitfalls": [
+       "Chores that pull players away from fun",
+       "Quests that require purchases"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "retention",
+     "mechanic": "competition",
+     "label": "Competition & leaderboards",
+     "priority": "P1",
+     "weight": 0.987,
+     "support": 2,
+     "media_support": 2,
+     "doc_support": [],
+     "consensus": 0.182,
+     "n_insights": 2,
+     "evidence": [
+      {
+       "source_id": "yt:T5OH2F6_ik0",
+       "title": "I Spent 2 Years Building the Roblox Tower Defense Game I Wanted to Play",
+       "author": "Superstitic",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=T5OH2F6_ik0&t=560s",
+       "quote": "Over [bell] the coming months, development will focus on story mode, new champions, additional enemies, ranked endless mode, and balancing in preparation for larger playtests.",
+       "start": 560.0,
+       "actionability": 0.467,
+       "source_score": 1.0,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:GE6Z1n57yDU",
+       "title": "How to ACTUALLY LEARN to Script in Roblox Studio (5 Steps to learn)",
+       "author": "MikoLikesHat",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=GE6Z1n57yDU&t=498s",
+       "quote": "Think of it like a ranked match just with the difference that you actually gain experience instead of just a rank.",
+       "start": 498.72,
+       "actionability": 0.493,
+       "source_score": 0.3724,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Combine an all-time leaderboard with seasonal or daily boards so new players can place.",
+       "Show rank deltas and the next rival above the player."
+      ],
+      "apis": [
+       "OrderedDataStore (all-time)",
+       "MemoryStoreService sorted maps (fast/seasonal boards)"
+      ],
+      "kpis": [
+       "Leaderboard view rate",
+       "Session length of competitive players"
+      ],
+      "pitfalls": [
+       "Boards dominated by whales or exploiters",
+       "No reachable tier for newcomers"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "retention",
+     "mechanic": "scarcity",
+     "label": "Scarcity & FOMO",
+     "priority": "P1",
+     "weight": 0.737,
+     "support": 2,
+     "media_support": 2,
+     "doc_support": [],
+     "consensus": 0.182,
+     "n_insights": 2,
+     "evidence": [
+      {
+       "source_id": "yt:fjlOaEALWmg",
+       "title": "How I Made a Viral Roblox Game",
+       "author": "janisjanis01",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=fjlOaEALWmg&t=182s",
+       "quote": "Make a starter pack that helps with progression. Add some limited-time items.",
+       "start": 182.64,
+       "actionability": 0.517,
+       "source_score": 0.3454,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:vUN2cJD4mUk",
+       "title": "How I Learned To Make Roblox Games in a Week",
+       "author": "BinzuDev",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=vUN2cJD4mUk&t=1821s",
+       "quote": "now with the limited time I had left I wanted to focus on diversifying the game play cuz as it is now every life is basically the same",
+       "start": 1821.76,
+       "actionability": 0.467,
+       "source_score": 0.4585,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Use limited-time content to create reasons to return, with clear end dates and earnable paths.",
+       "Rotate items back later so scarcity drives timing, not exclusion."
+      ],
+      "apis": [],
+      "kpis": [
+       "Return rate during limited windows"
+      ],
+      "pitfalls": [
+       "Fake or misleading countdowns",
+       "Pressure tactics aimed at young players"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "retention",
+     "mechanic": "daily_rewards",
+     "label": "Daily rewards & streaks",
+     "priority": "P1",
+     "weight": 0.725,
+     "support": 2,
+     "media_support": 2,
+     "doc_support": [],
+     "consensus": 0.182,
+     "n_insights": 2,
+     "evidence": [
+      {
+       "source_id": "yt:LZOohZHsJus",
+       "title": "My Roblox Game Makes $119,300/mo (38K CCU, here's how)",
+       "author": "Tizzy RBLX",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=LZOohZHsJus&t=965s",
+       "quote": "All right? You want to have a strong curiosity hook, strong reason to come back tomorrow.",
+       "start": 965.96,
+       "actionability": 0.533,
+       "source_score": 0.5621,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:WFyrlstSDe4",
+       "title": "I Accidentally Made a Viral Roblox Game",
+       "author": "Laugh",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=WFyrlstSDe4&t=438s",
+       "quote": "Day one retention is how many people play the game and then come back the next day.",
+       "start": 438.28,
+       "actionability": 0.35,
+       "source_score": 0.3317,
+       "metrics": [
+        "Day one retention is how"
+       ],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [
+      "Day one retention is how"
+     ],
+     "playbook": {
+      "build": [
+       "Track lastClaimDay and streak server-side in UTC days (os.time() // 86400); never trust client time.",
+       "Escalate rewards across a 7-day cycle with a highlight on day 7; show tomorrow's reward to create intent.",
+       "Use a forgiving streak (grace day or partial reset) so one missed day does not erase the habit."
+      ],
+      "apis": [
+       "DataStoreService:UpdateAsync (atomic claim)",
+       "ExperienceNotificationService:PromptOptIn for 'reward ready' reminders"
+      ],
+      "kpis": [
+       "D1 / D7 retention",
+       "Daily claim rate",
+       "Streak length distribution"
+      ],
+      "pitfalls": [
+       "Double claims from a race between servers (use UpdateAsync)",
+       "Rewards so large they distort the economy"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "retention",
+     "mechanic": "live_ops",
+     "label": "Updates, events & live ops",
+     "priority": "P2",
+     "weight": 0.416,
+     "support": 1,
+     "media_support": 1,
+     "doc_support": [],
+     "consensus": 0.091,
+     "n_insights": 2,
+     "evidence": [
+      {
+       "source_id": "yt:fjlOaEALWmg",
+       "title": "How I Made a Viral Roblox Game",
+       "author": "janisjanis01",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=fjlOaEALWmg&t=531s",
+       "quote": "On update days, I suggest doing admin abuse events. Give players something valuable so they have a reason to hop on.",
+       "start": 531.6,
+       "actionability": 0.52,
+       "source_score": 0.3454,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Publish a predictable update cadence and announce it in-game (update log board) and on the game page.",
+       "Run time-boxed events with server-authoritative start/end times; schedule them as Experience Events.",
+       "Measure each update's effect on returning-player counts, not only on new users."
+      ],
+      "apis": [
+       "Experience Events (Creator Hub)",
+       "MessagingService for cross-server event starts",
+       "MemoryStoreService for event state"
+      ],
+      "kpis": [
+       "Returning users on update day",
+       "Event participation rate",
+       "D7 retention of event cohort"
+      ],
+      "pitfalls": [
+       "Content droughts after launch",
+       "Events that shut out new players"
+      ]
+     },
+     "stale_flags": []
+    }
+   ]
+  },
+  {
+   "pillar": "onboarding",
+   "label": "Onboarding & first-time UX",
+   "focus": true,
+   "sources_analyzed": 10,
+   "insights": 19,
+   "mechanics": [
+    {
+     "pillar": "onboarding",
+     "mechanic": "guidance",
+     "label": "Tutorials & guidance",
+     "priority": "P0",
+     "weight": 2.545,
+     "support": 5,
+     "media_support": 5,
+     "doc_support": [],
+     "consensus": 0.5,
+     "n_insights": 11,
+     "evidence": [
+      {
+       "source_id": "yt:-QSmtYVMRH4",
+       "title": "How to make your FIRST Roblox Game (Make Robux)",
+       "author": "CodeBro29",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=-QSmtYVMRH4&t=204s",
+       "quote": "If you want to redo something, you can either click this arrow right here or you can click control shift Z and that'll redo what you just did.",
+       "start": 204.8,
+       "actionability": 0.667,
+       "source_score": 0.5258,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:GE6Z1n57yDU",
+       "title": "How to ACTUALLY LEARN to Script in Roblox Studio (5 Steps to learn)",
+       "author": "MikoLikesHat",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=GE6Z1n57yDU&t=321s",
+       "quote": "In my opinion, if you're a beginner, you should start with YouTube tutorials as a guide.",
+       "start": 321.04,
+       "actionability": 0.693,
+       "source_score": 0.3724,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:v8vby3iOOX4",
+       "title": "How To Make Your First Roblox Game in 2026 (With AI)",
+       "author": "DitchyDevelopments",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=v8vby3iOOX4&t=58s",
+       "quote": "Instead, go on to YouTube and find tutorials for the type of game that you want to make.",
+       "start": 58.92,
+       "actionability": 0.467,
+       "source_score": 0.5084,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:UE_4mNwcXco",
+       "title": "I Tried Learning Roblox Scripting In 7 Days",
+       "author": "DeHapy",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=UE_4mNwcXco&t=849s",
+       "quote": "After finishing the YouTube tutorial, I decided to try and customize it to make a grow a garden tycoon.",
+       "start": 849.36,
+       "actionability": 0.467,
+       "source_score": 0.3299,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:H4X8L5namhA",
+       "title": "You CAN Script. Let me PROVE IT to you..",
+       "author": "script_ing",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=H4X8L5namhA&t=1043s",
+       "quote": "the first thing is completely free this is a Blog where I literally just write tutorial and I try to do this every single morning",
+       "start": 1043.8,
+       "actionability": 0.467,
+       "source_score": 0.381,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Teach by doing: one instruction at a time, triggered by context, dismissed by completing it.",
+       "Use world-space guidance (Beam arrow to the next objective, highlighted target) over modal text.",
+       "A/B test guidance variants (e.g. dialogue vs arrow) with Experiments."
+      ],
+      "apis": [
+       "Beam + Attachment",
+       "Highlight",
+       "ProximityPrompt",
+       "Experiments (Creator Hub)"
+      ],
+      "kpis": [
+       "Per-step completion and time-to-complete",
+       "Tutorial skip rate"
+      ],
+      "pitfalls": [
+       "Unskippable long tutorials",
+       "Teaching every system before the fun"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "onboarding",
+     "mechanic": "ui_clarity",
+     "label": "UI clarity & readability",
+     "priority": "P1",
+     "weight": 1.097,
+     "support": 2,
+     "media_support": 2,
+     "doc_support": [],
+     "consensus": 0.2,
+     "n_insights": 3,
+     "evidence": [
+      {
+       "source_id": "yt:v8vby3iOOX4",
+       "title": "How To Make Your First Roblox Game in 2026 (With AI)",
+       "author": "DitchyDevelopments",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=v8vby3iOOX4&t=273s",
+       "quote": "Instead of switching between different design tools or trying to learn complex software just to make UI elements, you can simply describe what you want, like a coin icon, a shop menu, or even a full UI style, and Forge",
+       "start": 273.48,
+       "actionability": 0.787,
+       "source_score": 0.5084,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:Ht6ZfibXpDs",
+       "title": "How To Make A Combat System In Roblox Studio [BEGINNER TUTORIAL]",
+       "author": "VuukStudios",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=Ht6ZfibXpDs&t=53s",
+       "quote": "uh UI uh a modeling there's so many things that I teach in there so yeah if you're interested in that part make sure to check it out",
+       "start": 53.08,
+       "actionability": 0.493,
+       "source_score": 0.3,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Establish a visual hierarchy: one primary action per screen, secondary buttons visibly smaller.",
+       "Size with Scale and constraints so layouts hold on phones, tablets, PC and console.",
+       "Keep the HUD minimal during onboarding and reveal panels as they become relevant."
+      ],
+      "apis": [
+       "UDim2.fromScale",
+       "UIAspectRatioConstraint",
+       "UIScale",
+       "ScreenGui.ScreenInsets (safe areas)"
+      ],
+      "kpis": [
+       "Misclick / back-out rate on menus",
+       "Purchase prompt reach"
+      ],
+      "pitfalls": [
+       "Pixel-sized UI that breaks on mobile",
+       "Shop buttons covering the play area"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "onboarding",
+     "mechanic": "funnel",
+     "label": "Onboarding funnel measurement & experiments",
+     "priority": "P1",
+     "weight": 1.09,
+     "support": 2,
+     "media_support": 2,
+     "doc_support": [],
+     "consensus": 0.2,
+     "n_insights": 2,
+     "evidence": [
+      {
+       "source_id": "yt:-QSmtYVMRH4",
+       "title": "How to make your FIRST Roblox Game (Make Robux)",
+       "author": "CodeBro29",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=-QSmtYVMRH4&t=393s",
+       "quote": "Uh, and I'm just going to walk you through step by step everything you need to know, and by the end of the game or end of the video, you'll have made the game that I just showed you at",
+       "start": 393.6,
+       "actionability": 0.52,
+       "source_score": 0.5258,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:9MUgLaF22Yo",
+       "title": "Roblox Studio Basics - Roblox Beginners Scripting Tutorial #1 (2025)",
+       "author": "BrawlDev",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=9MUgLaF22Yo&t=149s",
+       "quote": "now before we do anything I encourage you to basically follow exactly what I do step by step so that you can kind of get a feel for how to use Roblox studio and you're experiencing what I'm teaching you",
+       "start": 149.56,
+       "actionability": 0.63,
+       "source_score": 0.6571,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Instrument every onboarding step with LogOnboardingFunnelStepEvent (ordered, one-time per player).",
+       "Use LogFunnelStepEvent for recurring funnels (shop flow, quest chains) and Journeys for branching paths.",
+       "Fix the largest drop-off first, then A/B test the fix with Experiments, broken down by player segment (new vs returning, U18 vs 18+)."
+      ],
+      "apis": [
+       "AnalyticsService:LogOnboardingFunnelStepEvent",
+       "AnalyticsService:LogFunnelStepEvent",
+       "Analytics > Journeys",
+       "Experiments (segmentation & targeting)"
+      ],
+      "kpis": [
+       "Step-to-step conversion",
+       "Overall onboarding completion"
+      ],
+      "pitfalls": [
+       "Too many steps to read the funnel",
+       "Logging steps from the client"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "onboarding",
+     "mechanic": "friction",
+     "label": "Friction & cognitive load",
+     "priority": "P1",
+     "weight": 1.009,
+     "support": 2,
+     "media_support": 2,
+     "doc_support": [],
+     "consensus": 0.2,
+     "n_insights": 2,
+     "evidence": [
+      {
+       "source_id": "yt:J6JBEsGL0Qw",
+       "title": "I made a scary game on Roblox in 24 hours...",
+       "author": "Serge",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=J6JBEsGL0Qw&t=317s",
+       "quote": "a classroom and close the door but here's the catch my game has a somewhat confusing map and I made it that way on purpose the goal is to make it",
+       "start": 317.16,
+       "actionability": 0.617,
+       "source_score": 0.5955,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:LZOohZHsJus",
+       "title": "My Roblox Game Makes $119,300/mo (38K CCU, here's how)",
+       "author": "Tizzy RBLX",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=LZOohZHsJus&t=874s",
+       "quote": "Every little feature you add needs to feel intuitive, and there needs to be a a very clear cause and effect, okay?",
+       "start": 874.24,
+       "actionability": 0.467,
+       "source_score": 0.5621,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Cut every step between join and fun that does not teach or reward; count clicks to first action.",
+       "Introduce one concept at a time and confirm understanding through action."
+      ],
+      "apis": [],
+      "kpis": [
+       "Funnel drop-off per step"
+      ],
+      "pitfalls": [
+       "Multiple currencies explained at once",
+       "Popups stacking on join"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "onboarding",
+     "mechanic": "platforms",
+     "label": "Mobile & cross-platform input",
+     "priority": "P1",
+     "weight": 0.708,
+     "support": 1,
+     "media_support": 1,
+     "doc_support": [],
+     "consensus": 0.1,
+     "n_insights": 1,
+     "evidence": [
+      {
+       "source_id": "yt:KXAYJ5TnKH4",
+       "title": "How To MAKE a ROBLOX GAME on MOBILE...",
+       "author": "Reckless - Roblox",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=KXAYJ5TnKH4&t=215s",
+       "quote": "now the next thing you want to do is of course log in now I've never logged into like Roblox through my desktop on my phone",
+       "start": 215.68,
+       "actionability": 0.667,
+       "source_score": 0.7118,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Design for touch first: thumb-reachable buttons, no hover-only interactions.",
+       "Bind actions once for all inputs and test on a real phone and gamepad."
+      ],
+      "apis": [
+       "ContextActionService",
+       "UserInputService.TouchEnabled / GamepadEnabled"
+      ],
+      "kpis": [
+       "Retention and playtime split by device"
+      ],
+      "pitfalls": [
+       "PC-only keybind hints",
+       "Tiny touch targets"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "onboarding",
+     "mechanic": "first_session",
+     "label": "First session & first impression",
+     "priority": "P1",
+     "weight": 0.465,
+     "support": 1,
+     "media_support": 1,
+     "doc_support": [],
+     "consensus": 0.1,
+     "n_insights": 1,
+     "evidence": [
+      {
+       "source_id": "yt:GE6Z1n57yDU",
+       "title": "How to ACTUALLY LEARN to Script in Roblox Studio (5 Steps to learn)",
+       "author": "MikoLikesHat",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=GE6Z1n57yDU&t=186s",
+       "quote": "So, I will explain this in the easiest way possible because this may be a little complex for you, especially if it's your first time.",
+       "start": 186.8,
+       "actionability": 0.643,
+       "source_score": 0.3724,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Spawn new players directly into the core action; defer menus, lore and settings.",
+       "Script the first 60 seconds: first action, first reward, first upgrade.",
+       "Detect first-time players server-side and give them the guided path; skip it for returners."
+      ],
+      "apis": [
+       "AnalyticsService:LogOnboardingFunnelStepEvent",
+       "DataStoreService (hasCompletedTutorial flag)"
+      ],
+      "kpis": [
+       "Onboarding funnel step completion",
+       "First-play bounce rate",
+       "D1 retention"
+      ],
+      "pitfalls": [
+       "Loading screens and text walls before play",
+       "Same tutorial for returning players"
+      ]
+     },
+     "stale_flags": []
+    }
+   ]
+  },
+  {
+   "pillar": "monetization",
+   "label": "Monetization",
+   "focus": true,
+   "sources_analyzed": 11,
+   "insights": 15,
+   "mechanics": [
+    {
+     "pillar": "monetization",
+     "mechanic": "pricing",
+     "label": "Pricing, bundles & offers",
+     "priority": "P0",
+     "weight": 2.393,
+     "support": 5,
+     "media_support": 5,
+     "doc_support": [],
+     "consensus": 0.455,
+     "n_insights": 6,
+     "evidence": [
+      {
+       "source_id": "yt:ltbZzXRrDF8",
+       "title": "How To Make An ENTIRE Roblox Game With AI - Full Guide",
+       "author": "GuideRealm",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=ltbZzXRrDF8&t=452s",
+       "quote": "You can also adjust the upgrade prices and income rates to make sure progression feels rewarding without becoming too easy or too slow.",
+       "start": 452.52,
+       "actionability": 0.693,
+       "source_score": 0.6868,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:-QSmtYVMRH4",
+       "title": "How to make your FIRST Roblox Game (Make Robux)",
+       "author": "CodeBro29",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=-QSmtYVMRH4&t=1530s",
+       "quote": "I'm going to set mine to be 20 Robux. Really cheap, but uh don't make it too expensive, otherwise people won't buy it.",
+       "start": 1530.32,
+       "actionability": 0.48,
+       "source_score": 0.5258,
+       "metrics": [
+        "mine to be 20 Robux . Really cheap"
+       ],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:Dp7vw20e-fA",
+       "title": "How FAST Can I Make a Roblox Game?",
+       "author": "Duckable",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=Dp7vw20e-fA&t=537s",
+       "quote": "[clears throat] Build the item, place it into your tycoon, give it a name, create a button, give the button heroid, add a price, add what you need to buy first before the button appears, link it to your item,",
+       "start": 537.11,
+       "actionability": 0.693,
+       "source_score": 0.4059,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:fjlOaEALWmg",
+       "title": "How I Made a Viral Roblox Game",
+       "author": "janisjanis01",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=fjlOaEALWmg&t=182s",
+       "quote": "Make a starter pack that helps with progression. Add some limited-time items.",
+       "start": 182.64,
+       "actionability": 0.517,
+       "source_score": 0.3454,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:-5OOovmkJss",
+       "title": "ABSOLUTE Beginner Basics.. Roblox Studio For Noobs 2025",
+       "author": "RoBuilder",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=-5OOovmkJss&t=383s",
+       "quote": "Nine times out of 10, you want to anchor all of your builds or you're going to be in for a lagging nightmare the bigger your map gets.",
+       "start": 383.68,
+       "actionability": 0.467,
+       "source_score": 0.3087,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [
+      "mine to be 20 Robux . Really cheap"
+     ],
+     "playbook": {
+      "build": [
+       "Build a price ladder: a low-friction starter offer, core items, and premium bundles that anchor value.",
+       "Use Price Optimization and Regional Pricing instead of guessing; re-test after major updates.",
+       "Read prices with GetProductInfo on the client so price-optimisation tests show each player their price.",
+       "Sell the first purchase cheaply (tens of Robux); many small payers beat one big spender for retention and discovery."
+      ],
+      "apis": [
+       "Price Optimization (Creator Hub)",
+       "Regional pricing",
+       "MarketplaceService:GetProductInfo"
+      ],
+      "kpis": [
+       "Conversion by price point",
+       "Revenue per DAU"
+      ],
+      "pitfalls": [
+       "Only high price points (no first purchase)",
+       "Constant discounts training players to wait"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "monetization",
+     "mechanic": "random_items",
+     "label": "Paid random items (eggs, crates)",
+     "priority": "P1",
+     "weight": 1.181,
+     "support": 2,
+     "media_support": 2,
+     "doc_support": [],
+     "consensus": 0.182,
+     "n_insights": 5,
+     "evidence": [
+      {
+       "source_id": "yt:F9sfnpkzcPw",
+       "title": "Can I Make a VIRAL TYCOON in 24 HOURS?",
+       "author": "Duckable",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=F9sfnpkzcPw&t=608s",
+       "quote": "So, right now, the eggs don't work right. And I think what I need to do is tell the client to throw the eggs instead of the server. In non stupid nerd words, we need to give the player's device control over the eggs so …",
+       "start": 608.96,
+       "actionability": 0.683,
+       "source_score": 0.4847,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:WFyrlstSDe4",
+       "title": "I Accidentally Made a Viral Roblox Game",
+       "author": "Laugh",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=WFyrlstSDe4&t=701s",
+       "quote": "We are perfectly engineering this to make sure there is no way to somehow pay Robux and buy these loot boxes.",
+       "start": 701.68,
+       "actionability": 0.52,
+       "source_score": 0.3317,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "If you sell random items, disclose odds before purchase and keep items earnable through play.",
+       "Check PolicyService for each player and offer a direct-purchase path where paid random items are restricted."
+      ],
+      "apis": [
+       "PolicyService:GetPolicyInfoForPlayerAsync (ArePaidRandomItemsRestricted)"
+      ],
+      "kpis": [
+       "Conversion vs refund/complaint signals",
+       "Retention of payers"
+      ],
+      "pitfalls": [
+       "Undisclosed odds (policy violation)",
+       "Ignoring regional restrictions"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "monetization",
+     "mechanic": "dev_products",
+     "label": "Developer products (consumables)",
+     "priority": "P1",
+     "weight": 0.867,
+     "support": 1,
+     "media_support": 1,
+     "doc_support": [],
+     "consensus": 0.091,
+     "n_insights": 1,
+     "evidence": [
+      {
+       "source_id": "yt:KXAYJ5TnKH4",
+       "title": "How To MAKE a ROBLOX GAME on MOBILE...",
+       "author": "Reckless - Roblox",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=KXAYJ5TnKH4&t=78s",
+       "quote": "so if you want both of those things make sure you watch this whole video throughout even if you skip 10 seconds you might miss something important and it won't work you as you might be like this guy yeah",
+       "start": 78.2,
+       "actionability": 0.817,
+       "source_score": 0.7118,
+       "metrics": [
+        "if you skip 10 seconds you might miss"
+       ],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [
+      "if you skip 10 seconds you might miss"
+     ],
+     "playbook": {
+      "build": [
+       "Sell consumables (boosts, currency packs, revives) as developer products.",
+       "Grant inside MarketplaceService.ProcessReceipt and return PurchaseGranted only after the grant is saved; dedupe by PurchaseId.",
+       "Offer products in context (revive on death, boost before a hard section) and allow buying several consumables at once.",
+       "Order the shop per player with the product intelligence APIs (RankProductsAsync once at join; RecommendTopProductsAsync via task.spawn).",
+       "Subscribe to the Transaction Refunded webhook and claw back refunded developer-product grants in your own data."
+      ],
+      "apis": [
+       "MarketplaceService:PromptProductPurchase",
+       "MarketplaceService.ProcessReceipt",
+       "RankProductsAsync / RecommendTopProductsAsync",
+       "Transaction Refunded webhook",
+       "AnalyticsService:LogEconomyEvent"
+      ],
+      "kpis": [
+       "Payer conversion",
+       "ARPPU",
+       "Repeat purchase rate",
+       "Refund rate"
+      ],
+      "pitfalls": [
+       "Granting before persisting (lost purchases)",
+       "Non-idempotent receipt handling (double grants)",
+       "Broken ProcessReceipt blocks sales of Listed products outside the game"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "monetization",
+     "mechanic": "ads",
+     "label": "Ads (rewarded, immersive, sponsored)",
+     "priority": "P1",
+     "weight": 0.71,
+     "support": 1,
+     "media_support": 1,
+     "doc_support": [],
+     "consensus": 0.091,
+     "n_insights": 1,
+     "evidence": [
+      {
+       "source_id": "yt:8xgnm6SynH4",
+       "title": "I Spent 24 Hours With Roblox Millionaires",
+       "author": "Starter Story",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=8xgnm6SynH4&t=295s",
+       "quote": "So instead of just going out and you know putting a YouTube sponsor like before this video for example, they can build something that's interactive in Roblox and that's the new way to make people into kind of lifelong fans.",
+       "start": 295.36,
+       "actionability": 0.613,
+       "source_score": 0.8078,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Treat rewarded ads as opt-in value exchanges placed at natural pauses.",
+       "Use Ads Manager campaigns to buy acquisition only after onboarding converts well."
+      ],
+      "apis": [
+       "Ads Manager (Creator Hub)",
+       "Immersive ads"
+      ],
+      "kpis": [
+       "Cost per acquired player vs their D7 value"
+      ],
+      "pitfalls": [
+       "Paying to acquire players into a leaky funnel"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "monetization",
+     "mechanic": "conversion",
+     "label": "Conversion & revenue KPIs",
+     "priority": "P1",
+     "weight": 0.406,
+     "support": 1,
+     "media_support": 1,
+     "doc_support": [],
+     "consensus": 0.091,
+     "n_insights": 1,
+     "evidence": [
+      {
+       "source_id": "yt:xnlaYLnCtFc",
+       "title": "Watch this before making ROBLOX Games",
+       "author": "waveshine",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=xnlaYLnCtFc&t=65s",
+       "quote": "You need to understand marketing, game design, retention, monetization, balancing, psychology, and more. It's not a get-richqu scheme.",
+       "start": 65.36,
+       "actionability": 0.617,
+       "source_score": 0.3078,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Log every purchase and currency flow with LogEconomyEvent to see sources, sinks and paths to purchase.",
+       "Increase conversion by placing offers where players feel the need, not by adding more offers."
+      ],
+      "apis": [
+       "AnalyticsService:LogEconomyEvent",
+       "Creator Hub Analytics: Monetization"
+      ],
+      "kpis": [
+       "Payer conversion",
+       "ARPDAU",
+       "ARPPU"
+      ],
+      "pitfalls": [
+       "Optimising revenue while D7 retention falls"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "monetization",
+     "mechanic": "fairness",
+     "label": "Fairness & player trust",
+     "priority": "P1",
+     "weight": 0.378,
+     "support": 1,
+     "media_support": 1,
+     "doc_support": [],
+     "consensus": 0.091,
+     "n_insights": 1,
+     "evidence": [
+      {
+       "source_id": "yt:vUN2cJD4mUk",
+       "title": "How I Learned To Make Roblox Games in a Week",
+       "author": "BinzuDev",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=vUN2cJD4mUk&t=2229s",
+       "quote": "to be greedy instead of wanting to make a fun experience and from what I've heard the Roblox algorithm seems to push games that make a lot of money which in turn makes the game more popular and thus makes more money regardless of if …",
+       "start": 2229.64,
+       "actionability": 0.467,
+       "source_score": 0.4585,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Sell time savings, convenience and cosmetics; keep competitive outcomes skill-based.",
+       "Make every paid advantage reachable through play, slower."
+      ],
+      "apis": [],
+      "kpis": [
+       "Retention of non-payers",
+       "Review / like ratio"
+      ],
+      "pitfalls": [
+       "Pay-to-win perception driving away the non-paying majority"
+      ]
+     },
+     "stale_flags": []
+    }
+   ]
+  },
+  {
+   "pillar": "discovery",
+   "label": "Discovery & growth",
+   "focus": false,
+   "sources_analyzed": 6,
+   "insights": 7,
+   "mechanics": [
+    {
+     "pillar": "discovery",
+     "mechanic": "algorithm",
+     "label": "Recommendation algorithm",
+     "priority": "P0",
+     "weight": 1.966,
+     "support": 4,
+     "media_support": 4,
+     "doc_support": [],
+     "consensus": 0.667,
+     "n_insights": 5,
+     "evidence": [
+      {
+       "source_id": "yt:fjlOaEALWmg",
+       "title": "How I Made a Viral Roblox Game",
+       "author": "janisjanis01",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=fjlOaEALWmg&t=500s",
+       "quote": "By now, your game should be in the algorithm. Your stats should slowly improve and the game will start to earn its first money.",
+       "start": 500.88,
+       "actionability": 0.667,
+       "source_score": 0.3454,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:v8vby3iOOX4",
+       "title": "How To Make Your First Roblox Game in 2026 (With AI)",
+       "author": "DitchyDevelopments",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=v8vby3iOOX4&t=95s",
+       "quote": "Most beginners, like myself, assume you need to be some sort of insane 3D artist before you can make your first game, but you really don't.",
+       "start": 95.16,
+       "actionability": 0.667,
+       "source_score": 0.5084,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:vUN2cJD4mUk",
+       "title": "How I Learned To Make Roblox Games in a Week",
+       "author": "BinzuDev",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=vUN2cJD4mUk&t=2229s",
+       "quote": "to be greedy instead of wanting to make a fun experience and from what I've heard the Roblox algorithm seems to push games that make a lot of money which in turn makes the game more popular and thus makes more money regardless of if …",
+       "start": 2229.64,
+       "actionability": 0.467,
+       "source_score": 0.4585,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      },
+      {
+       "source_id": "yt:Ht6ZfibXpDs",
+       "title": "How To Make A Combat System In Roblox Studio [BEGINNER TUTORIAL]",
+       "author": "VuukStudios",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=Ht6ZfibXpDs&t=1648s",
+       "quote": "make sure to check them out I have a bunch of videos explaining my development journey and essentially I'm a front page developer I earned about like 200 Grand in commissions uh totally across these two years and I'm like",
+       "start": 1648.72,
+       "actionability": 0.743,
+       "source_score": 0.3,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Optimise the signals the recommender reads: play-through, play days and playtime per user (D1, D2-D7, D8-D28), co-play days, spend days and Robux spend.",
+       "Fix first-play bounce before buying traffic; recommendations expand to cohorts that engage.",
+       "Strength in both retention and monetisation earns broader distribution than either alone."
+      ],
+      "apis": [
+       "Creator Hub Analytics: Acquisition"
+      ],
+      "kpis": [
+       "Home impressions",
+       "Play-through rate",
+       "D1/D7 retention"
+      ],
+      "pitfalls": [
+       "Chasing impressions with a game that does not retain"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "discovery",
+     "mechanic": "paid_acquisition",
+     "label": "Paid acquisition",
+     "priority": "P1",
+     "weight": 0.71,
+     "support": 1,
+     "media_support": 1,
+     "doc_support": [],
+     "consensus": 0.167,
+     "n_insights": 1,
+     "evidence": [
+      {
+       "source_id": "yt:8xgnm6SynH4",
+       "title": "I Spent 24 Hours With Roblox Millionaires",
+       "author": "Starter Story",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=8xgnm6SynH4&t=295s",
+       "quote": "So instead of just going out and you know putting a YouTube sponsor like before this video for example, they can build something that's interactive in Roblox and that's the new way to make people into kind of lifelong fans.",
+       "start": 295.36,
+       "actionability": 0.613,
+       "source_score": 0.8078,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Buy ads/sponsorships to test the funnel at scale once D1 retention is healthy."
+      ],
+      "apis": [
+       "Ads Manager (Creator Hub)"
+      ],
+      "kpis": [
+       "Cost per play",
+       "Paid-cohort D7 retention"
+      ],
+      "pitfalls": [
+       "Scaling spend before onboarding works"
+      ]
+     },
+     "stale_flags": []
+    },
+    {
+     "pillar": "discovery",
+     "mechanic": "external",
+     "label": "External content & creators",
+     "priority": "P1",
+     "weight": 0.39,
+     "support": 1,
+     "media_support": 1,
+     "doc_support": [],
+     "consensus": 0.167,
+     "n_insights": 1,
+     "evidence": [
+      {
+       "source_id": "yt:F9sfnpkzcPw",
+       "title": "Can I Make a VIRAL TYCOON in 24 HOURS?",
+       "author": "Duckable",
+       "kind": "youtube",
+       "link": "https://www.youtube.com/watch?v=F9sfnpkzcPw&t=871s",
+       "quote": "Uh, no. If we want our game to go viral, we need to make sure it feels good to play.",
+       "start": 871.36,
+       "actionability": 0.467,
+       "source_score": 0.4847,
+       "metrics": [],
+       "tactic": null,
+       "stale": null
+      }
+     ],
+     "metrics": [],
+     "playbook": {
+      "build": [
+       "Seed short-form clips of the most shareable moment; give creators reasons to record (events, codes, secrets)."
+      ],
+      "apis": [],
+      "kpis": [
+       "Traffic by source (Acquisition dashboard)"
+      ],
+      "pitfalls": [
+       "Spikes from content that the game cannot retain"
+      ]
+     },
+     "stale_flags": []
+    }
+   ]
+  }
+ ],
+ "platform_notices": []
+}
