@@ -1,0 +1,47 @@
+# `bpe top-videos --spec config/roblox-top-videos.toml --data data/top25`
+# Top Roblox developer videos from the last 3 years, ranked by views per day.
+
+[run]
+results_per_query = 20
+shortlist = 70          # most-viewed Roblox candidates per group that get full metadata
+max_age_days = 1095     # last 3 years: Roblox's algorithm and payout programs keep changing
+min_duration_s = 180    # no Shorts
+max_duration_s = 3600
+min_dev_intent = 0.6    # title or description must signal teaching/building, not gameplay
+workers = 3
+request_interval_s = 0.8
+
+# The top 25 Roblox dev / Studio videos overall.
+[groups.top25]
+n = 25
+queries = [
+  "roblox studio tutorial",
+  "how to make a roblox game",
+  "roblox game development",
+  "roblox devlog",
+  "how i made a roblox game",
+  "roblox game dev tips",
+  "how to make a successful roblox game",
+  "roblox studio beginner guide",
+  "roblox scripting tutorial",
+  "making a roblox game in 24 hours",
+  "roblox game design tips",
+  "how roblox developers make money",
+  "i made a viral roblox game",
+  "roblox studio tips and tricks",
+  "roblox developer advice",
+]
+
+# Supplementary: the mechanics Yeet a Car depends on.
+[groups.car_tech]
+n = 8
+queries = [
+  "roblox studio car tutorial",
+  "roblox vehicle chassis tutorial",
+  "roblox car physics studio",
+  "roblox destruction physics tutorial",
+  "roblox car crash game how i made",
+  "roblox ragdoll tutorial studio",
+  "roblox explosion script tutorial",
+  "roblox launch car ramp game",
+]

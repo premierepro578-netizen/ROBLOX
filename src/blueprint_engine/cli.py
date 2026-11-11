@@ -149,6 +149,20 @@ def cmd_thumbs(args) -> int:
     return 1 if result["summary"].get("fail") else 0
 
 
+def cmd_top_videos(args) -> int:
+    from blueprint_engine.topvideos import load_spec, run_top_videos
+
+    rep = run_top_videos(load_spec(args.spec), args.data)
+    for name, g in rep["groups"].items():
+        print(f"[{name}] {g['candidates']} candidates -> {g['roblox_shortlist']} shortlisted -> "
+              f"{g['eligible']} eligible -> {len(g['selected'])} selected")
+        for s in g["selected"]:
+            print(f"  {s['rank']:>2}. {s['views_per_day']:>9,.0f}/day  {s['channel'][:18]:<18} {s['title'][:64]}")
+    print(f"next: bpe --data {args.data} --reports reports/{Path(args.data).name} analyze && "
+          f"bpe --data {args.data} --reports reports/{Path(args.data).name} synthesize")
+    return 0
+
+
 def _load_blueprint(path: Path):
     from blueprint_engine.synthesis.blueprint import Blueprint, Evidence, MechanicFinding, PillarFinding
 
@@ -200,6 +214,10 @@ def build_parser() -> argparse.ArgumentParser:
     pr.add_argument("--var", action="append", help="fill a slot: --var game_concept='...'")
     pr.add_argument("--out", default=None)
     pr.set_defaults(fn=cmd_prompts)
+
+    tv = sub.add_parser("top-videos", help="top N videos per search group by views/day, with transcripts")
+    tv.add_argument("--spec", default="config/roblox-top-videos.toml")
+    tv.set_defaults(fn=cmd_top_videos)
 
     th = sub.add_parser("thumbs", help="study a channel's thumbnails, or score your own thumbnail/icon")
     th_sub = th.add_subparsers(dest="thumbs_cmd", required=True)
