@@ -12,7 +12,8 @@ import re
 
 from blueprint_engine.models import Segment
 
-_NOISE = re.compile(r"\[(?:music|applause|laughter|laughs|inaudible|__|silence)[^\]]*\]|>>|♪", re.I)
+# Caption artefacts: sound tags, YouTube's censored-profanity token "[ __ ]", speaker arrows.
+_NOISE = re.compile(r"\[(?:music|applause|laughter|laughs|inaudible|silence)[^\]]*\]|\[\s*_+\s*\]|>>|♪", re.I)
 _WS = re.compile(r"\s+")
 _TERMINAL = re.compile(r"[.!?…]['\")\]]*$")
 _SENT_SPLIT = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\"'(])")

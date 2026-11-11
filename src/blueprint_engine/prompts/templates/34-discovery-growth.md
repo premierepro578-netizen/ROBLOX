@@ -10,7 +10,10 @@ Plan discovery and growth for this game.
 - **Concept & hook:** {{game_concept}}
 - **Current metrics (impressions, CTR, play-through, D1/D7):** {{current_metrics}}
 
-## What top-performing sources teach (research evidence)
+## Curated findings (close reading of first-party talks and docs)
+{{key_findings_discovery}}
+
+## What top-performing sources teach (mined evidence)
 {{evidence_discovery}}
 
 ## Roblox implementation playbook

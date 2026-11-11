@@ -89,3 +89,13 @@ def test_discourse_topic_to_document():
     src, doc = topic_to_document(topic, "https://devforum.roblox.com")
     assert src.id == "df:42" and src.url.endswith("/t/retention-tips/42") and src.published == "2024-05-01"
     assert doc.segments[0].text == "Add a daily reward so players return."
+    assert not src.first_party
+
+
+def test_discourse_staff_announcement_is_first_party_and_skips_replies():
+    topic = {"id": 7, "slug": "launch", "title": "Launch", "post_stream": {"posts": [
+        {"username": "staffer", "primary_group_name": "Roblox_Staff", "cooked": "<p>Discounts on subscriptions are not eligible.</p>"},
+        {"username": "dev", "cooked": "<p>This is awesome, thank you so much for this!</p>"},
+    ]}}
+    src, doc = topic_to_document(topic, "https://devforum.roblox.com")
+    assert src.first_party and [s.text for s in doc.segments] == ["Discounts on subscriptions are not eligible."]

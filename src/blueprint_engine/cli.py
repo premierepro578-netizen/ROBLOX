@@ -97,18 +97,19 @@ def cmd_prompts(args) -> int:
     if bp_path.is_file():
         bp = _load_blueprint(bp_path)
     extra = dict(v.split("=", 1) for v in args.var or [])
+    kf = Path(args.config).parent / "key-findings.md"
     if args.all:
         if bp is None:
             print("no blueprint.json yet - run `bpe synthesize` first", file=sys.stderr)
             return 1
         out = Path(args.out or Path(args.reports) / "prompt-framework")
-        for p in write_framework(bp, out, extra):
+        for p in write_framework(bp, out, extra, key_findings_path=kf):
             print(p)
         return 0
     if not args.name or args.name not in templates:
         print(f"unknown prompt {args.name!r}; try `bpe prompts list`", file=sys.stderr)
         return 1
-    text, missing = render_one(templates[args.name], bp, extra)
+    text, missing = render_one(templates[args.name], bp, extra, key_findings_path=kf)
     if args.out:
         Path(args.out).write_text(text, encoding="utf-8")
     else:

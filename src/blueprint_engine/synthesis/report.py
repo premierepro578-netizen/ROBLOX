@@ -73,7 +73,7 @@ def render_report(bp: Blueprint, top_sources: int = 40) -> str:
 
     for p in sorted(bp.pillars, key=lambda p: not p.focus):
         out += [f"## {p.label}", "", f"{p.sources_analyzed} sources · {p.insights} insights", ""]
-        out += ["| Priority | Mechanic | Sources (media / docs) | Consensus | Weight |", "|---|---|---|---|---|"]
+        out += ["| Priority | Mechanic | Sources (creators / first-party) | Consensus | Weight |", "|---|---|---|---|---|"]
         for f in p.mechanics:
             out.append(f"| {f.priority} | {f.label} | {f.support} ({f.media_support} / {len(f.doc_support)}) | "
                        f"{f.consensus:.0%} | {f.weight:.2f} |")

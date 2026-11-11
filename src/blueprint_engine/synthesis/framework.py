@@ -4,11 +4,31 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from blueprint_engine.analysis.extract import readability
 from blueprint_engine.analysis.llm import taxonomy_text
 from blueprint_engine.analysis.taxonomy import TAXONOMY
 from blueprint_engine.prompts import PromptTemplate, load_templates, render
 from blueprint_engine.synthesis.blueprint import Blueprint
 from blueprint_engine.synthesis.report import fmt_ts
+
+
+MIN_PROMPT_READABILITY = 0.8
+NO_KEY_FINDINGS = "(no curated findings yet - add them to config/key-findings.md)"
+
+
+def load_key_findings(path: Path | None) -> dict[str, str]:
+    """Parse ``## <pillar_key>`` sections of the curated findings file into {pillar: markdown}."""
+    if not path or not Path(path).is_file():
+        return {}
+    sections: dict[str, list[str]] = {}
+    current = None
+    for line in Path(path).read_text(encoding="utf-8").splitlines():
+        if line.startswith("## "):
+            current = line[3:].strip().split()[0].lower()
+            sections[current] = []
+        elif current:
+            sections[current].append(line)
+    return {k: "\n".join(v).strip() for k, v in sections.items() if "\n".join(v).strip()}
 
 
 def _cite_short(e) -> str:
@@ -25,7 +45,9 @@ def evidence_digest(bp: Blueprint, pillar: str, mechanics: int = 6, quotes: int 
     for f in [m for m in p.mechanics if m.priority in ("P0", "P1")][:mechanics]:
         docs = f", {len(f.doc_support)} first-party doc(s)" if f.doc_support else ""
         lines.append(f"- **{f.label}** — {f.priority}, taught by {f.support} source(s){docs}")
-        for e in f.evidence[:quotes]:
+        # Prompts get only quotes that stand on their own; the full set stays in the report.
+        clean = [e for e in f.evidence if e.tactic or readability(e.quote) >= MIN_PROMPT_READABILITY]
+        for e in clean[:quotes]:
             lines.append(f"  - \"{e.tactic or e.quote}\" — {_cite_short(e)}")
         if f.metrics:
             lines.append(f"  - Numbers cited: {'; '.join(f.metrics[:4])}")
@@ -65,28 +87,32 @@ def notices_text(bp: Blueprint) -> str:
     return "\n".join(f"- {n['text']} ({n['url']})" for n in bp.platform_notices)
 
 
-def variables_from_blueprint(bp: Blueprint) -> dict[str, str]:
+def variables_from_blueprint(bp: Blueprint, key_findings: dict[str, str] | None = None) -> dict[str, str]:
     v = {
         "research_summary": research_summary(bp),
         "platform_notices": notices_text(bp),
         "taxonomy": taxonomy_text(TAXONOMY),
     }
+    key_findings = key_findings or {}
     for p in bp.pillars:
         v[f"evidence_{p.pillar}"] = evidence_digest(bp, p.pillar)
         v[f"playbook_{p.pillar}"] = playbook_digest(bp, p.pillar)
+        v[f"key_findings_{p.pillar}"] = key_findings.get(p.pillar, NO_KEY_FINDINGS)
     return v
 
 
-def write_framework(bp: Blueprint, out_dir: Path, extra: dict[str, str] | None = None) -> list[Path]:
+def write_framework(bp: Blueprint, out_dir: Path, extra: dict[str, str] | None = None,
+                    key_findings_path: Path | None = None) -> list[Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
-    variables = {**variables_from_blueprint(bp), **(extra or {})}
+    variables = {**variables_from_blueprint(bp, load_key_findings(key_findings_path)), **(extra or {})}
     templates = sorted(load_templates().values(), key=lambda t: (t.order, t.name))
     written: list[Path] = []
     index = [
         "# Game Design Prompt Framework",
         "",
         f"Rendered from the research run of {bp.generated_at}. Each prompt below already contains the relevant",
-        "research evidence (quotes with deep links) and the curated Roblox playbook. `{{slots}}` that remain are",
+        "curated findings (close reading of first-party talks and docs), the automatically mined evidence (quotes",
+        "with deep links) and the curated Roblox playbook. `{{slots}}` that remain are",
         "for you to fill in: your concept, metrics or spec.",
         "",
         "**How to use:** paste `00-architect-system.md` as the system prompt, then one task prompt as the user",
@@ -109,7 +135,8 @@ def write_framework(bp: Blueprint, out_dir: Path, extra: dict[str, str] | None =
     return written
 
 
-def render_one(template: PromptTemplate, bp: Blueprint | None, extra: dict[str, str]) -> tuple[str, list[str]]:
-    variables = variables_from_blueprint(bp) if bp else {}
+def render_one(template: PromptTemplate, bp: Blueprint | None, extra: dict[str, str],
+               key_findings_path: Path | None = None) -> tuple[str, list[str]]:
+    variables = variables_from_blueprint(bp, load_key_findings(key_findings_path)) if bp else {}
     variables.update(extra)
     return render(template, variables)

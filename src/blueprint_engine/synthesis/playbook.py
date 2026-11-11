@@ -247,10 +247,11 @@ PLAYBOOK: dict[tuple[str, str], Play] = {
     ("onboarding", "funnel"): P(
         build=(
             "Instrument every onboarding step with LogOnboardingFunnelStepEvent (ordered, one-time per player).",
-            "Use LogFunnelStepEvent for recurring funnels (shop flow, quest chains).",
-            "Fix the largest drop-off first, then re-measure.",
+            "Use LogFunnelStepEvent for recurring funnels (shop flow, quest chains) and Journeys for branching paths.",
+            "Fix the largest drop-off first, then A/B test the fix with Experiments, broken down by player segment (new vs returning, U18 vs 18+).",
         ),
-        apis=("AnalyticsService:LogOnboardingFunnelStepEvent", "AnalyticsService:LogFunnelStepEvent", "Experiments"),
+        apis=("AnalyticsService:LogOnboardingFunnelStepEvent", "AnalyticsService:LogFunnelStepEvent", "Analytics > Journeys",
+              "Experiments (segmentation & targeting)"),
         kpis=("Step-to-step conversion", "Overall onboarding completion"),
         pitfalls=("Too many steps to read the funnel", "Logging steps from the client"),
     ),
@@ -269,11 +270,15 @@ PLAYBOOK: dict[tuple[str, str], Play] = {
         build=(
             "Sell consumables (boosts, currency packs, revives) as developer products.",
             "Grant inside MarketplaceService.ProcessReceipt and return PurchaseGranted only after the grant is saved; dedupe by PurchaseId.",
-            "Offer products in context (revive on death, boost before a hard section).",
+            "Offer products in context (revive on death, boost before a hard section) and allow buying several consumables at once.",
+            "Order the shop per player with the product intelligence APIs (RankProductsAsync once at join; RecommendTopProductsAsync via task.spawn).",
+            "Subscribe to the Transaction Refunded webhook and claw back refunded developer-product grants in your own data.",
         ),
-        apis=("MarketplaceService:PromptProductPurchase", "MarketplaceService.ProcessReceipt", "AnalyticsService:LogEconomyEvent"),
-        kpis=("Payer conversion", "ARPPU", "Repeat purchase rate"),
-        pitfalls=("Granting before persisting (lost purchases)", "Non-idempotent receipt handling (double grants)"),
+        apis=("MarketplaceService:PromptProductPurchase", "MarketplaceService.ProcessReceipt", "RankProductsAsync / RecommendTopProductsAsync",
+              "Transaction Refunded webhook", "AnalyticsService:LogEconomyEvent"),
+        kpis=("Payer conversion", "ARPPU", "Repeat purchase rate", "Refund rate"),
+        pitfalls=("Granting before persisting (lost purchases)", "Non-idempotent receipt handling (double grants)",
+                  "Broken ProcessReceipt blocks sales of Listed products outside the game"),
     ),
     ("monetization", "random_items"): P(
         build=(
@@ -306,6 +311,8 @@ PLAYBOOK: dict[tuple[str, str], Play] = {
         build=(
             "Build a price ladder: a low-friction starter offer, core items, and premium bundles that anchor value.",
             "Use Price Optimization and Regional Pricing instead of guessing; re-test after major updates.",
+            "Read prices with GetProductInfo on the client so price-optimisation tests show each player their price.",
+            "Sell the first purchase cheaply (tens of Robux); many small payers beat one big spender for retention and discovery.",
         ),
         apis=("Price Optimization (Creator Hub)", "Regional pricing", "MarketplaceService:GetProductInfo"),
         kpis=("Conversion by price point", "Revenue per DAU"),
@@ -346,17 +353,20 @@ PLAYBOOK: dict[tuple[str, str], Play] = {
     # ------------------------------------------------------------ discovery
     ("discovery", "thumbnails"): P(
         build=(
-            "Use a custom thumbnail (required for Home recommendations) that shows the core action clearly at small sizes.",
-            "Test icons/thumbnails against click-through and play-through; keep them accurate to the game.",
+            "Upload at least one custom 16:9 (1920x1080) thumbnail: since 2026-10-19 only games with one get Home recommendation impressions.",
+            "Turn on thumbnail personalization (up to five thumbnails); Roblox reports +8.5% average qualified play-through in testing.",
+            "Add a Home gameplay video of real, current footage of the core loop, readable in the first seconds.",
+            "Check every thumbnail on a phone-sized preview; keep them accurate to the game.",
         ),
-        apis=("Thumbnail personalization (Creator Hub)",),
+        apis=("Thumbnail personalization (Creator Hub)", "Gameplay videos on Home"),
         kpis=("Impressions -> click-through rate", "Play-through rate"),
         pitfalls=("Misleading thumbnails (hurt play-through and trust)",),
     ),
     ("discovery", "algorithm"): P(
         build=(
-            "Optimise the signals the recommender reads: play-through, playtime, retention, co-play and monetisation.",
+            "Optimise the signals the recommender reads: play-through, play days and playtime per user (D1, D2-D7, D8-D28), co-play days, spend days and Robux spend.",
             "Fix first-play bounce before buying traffic; recommendations expand to cohorts that engage.",
+            "Strength in both retention and monetisation earns broader distribution than either alone.",
         ),
         apis=("Creator Hub Analytics: Acquisition",),
         kpis=("Home impressions", "Play-through rate", "D1/D7 retention"),

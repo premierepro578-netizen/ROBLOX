@@ -37,6 +37,11 @@ class Source:
     score_breakdown: dict[str, float] = field(default_factory=dict)
     transcript_origin: str | None = None  # manual-captions | auto-captions | html | discourse | ...
 
+    @property
+    def first_party(self) -> bool:
+        """Roblox's own docs, or a Roblox staff announcement on the DevForum."""
+        return self.kind == "doc" or "first-party" in self.tags
+
     def link(self, start: float | None = None) -> str:
         """Deep link, with a timestamp where the platform supports one."""
         if start is not None and self.kind == "youtube":

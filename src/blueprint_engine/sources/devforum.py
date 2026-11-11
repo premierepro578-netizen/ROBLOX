@@ -38,6 +38,8 @@ def topic_to_document(topic: dict[str, Any], base_url: str, max_posts: int = 15)
         paragraphs.extend(cooked_to_paragraphs(post.get("cooked", "")))
     first = posts[0] if posts else {}
     created = (topic.get("created_at") or "")[:10] or None
+    group = (first.get("primary_group_name") or "").lower()
+    staff = bool(first.get("staff") or first.get("admin") or "staff" in group or group.startswith("roblox"))
     src = Source(
         id=f"df:{topic['id']}",
         kind="devforum",
@@ -48,8 +50,12 @@ def topic_to_document(topic: dict[str, Any], base_url: str, max_posts: int = 15)
         views=topic.get("views"),
         likes=topic.get("like_count"),
         comments=topic.get("posts_count"),
+        tags=["first-party"] if staff else [],
         transcript_origin="discourse",
     )
+    # Staff announcements: the platform's own post is the substance; replies are mostly reactions.
+    if staff:
+        paragraphs = cooked_to_paragraphs(first.get("cooked", ""))
     return src, Document(src.id, "discourse", "en", segments_from_paragraphs(paragraphs))
 
 

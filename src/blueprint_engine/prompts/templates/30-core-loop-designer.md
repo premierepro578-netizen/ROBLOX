@@ -11,7 +11,10 @@ Design the core gameplay loop for this game.
 - **Genre / references:** {{genre}}
 - **Target session length:** {{target_session_minutes}} minutes
 
-## What top-performing sources teach (research evidence)
+## Curated findings (close reading of first-party talks and docs)
+{{key_findings_core_loop}}
+
+## What top-performing sources teach (mined evidence)
 {{evidence_core_loop}}
 
 ## Roblox implementation playbook

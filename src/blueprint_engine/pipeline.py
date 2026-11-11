@@ -292,11 +292,17 @@ class Pipeline:
             def fetch_topic(tid: str) -> tuple[Source, Document]:
                 return self._cached_pair("df_cache", tid, lambda: self.forum.fetch_topic(int(tid)))
 
+            from blueprint_engine.ranking import topical_relevance
+
             for tid, res, err in parallel(fetch_topic, list(topics), 2):
                 if err:
                     rep.bump("devforum_failed")
                     continue
                 src, doc = res
+                rel = topical_relevance(src.title, " ".join(s.text for s in doc.segments[:40]))
+                if rel < run.min_relevance:
+                    rep.bump("devforum_off_topic")
+                    continue
                 src.queries = topics[tid]
                 forum_sources.append(src)
                 selected[src.id] = src
@@ -366,7 +372,9 @@ class Pipeline:
         elif extractor == "heuristic":
             def run_one(src: Source) -> list[Insight]:
                 doc = Document.from_json(self.store.get("documents", src.id))
-                found = extract_insights(doc, kind=src.kind, hint_pillars=src.pillars)
+                # First-party announcements are read like docs: declarative platform facts count.
+                kind = "doc" if src.first_party else src.kind
+                found = extract_insights(doc, kind=kind, hint_pillars=src.pillars)
                 self.store.put("insights", f"{src.id}.heuristic", [i.to_dict() for i in found])
                 return found
 
@@ -416,7 +424,8 @@ class Pipeline:
         rep = StageReport("synthesize")
         t0 = time.monotonic()
         sources = self.load_sources()
-        insights = self.load_insights(extractor)
+        # Insight files of sources dropped by a later re-ranking stay cached; ignore them.
+        insights = [i for i in self.load_insights(extractor) if i.source_id in sources]
         if not insights:
             raise RuntimeError(f"no {extractor!r} insights yet - run `bpe analyze` first")
         documents = {sid: Document.from_json(self.store.get("documents", sid)) for sid in sources
@@ -430,7 +439,7 @@ class Pipeline:
 
         (out / "blueprint.json").write_text(json.dumps(bp.to_dict(), ensure_ascii=False, indent=1), encoding="utf-8")
         (out / "evidence-report.md").write_text(render_report(bp), encoding="utf-8")
-        written = write_framework(bp, out / "prompt-framework")
+        written = write_framework(bp, out / "prompt-framework", key_findings_path=self.cfg.key_findings_path)
         rep.counts.update(
             sources=len(sources), insights=len(insights), prompts=len(written) - 1,
             p0=sum(1 for p in bp.pillars for f in p.mechanics if f.priority == "P0"),

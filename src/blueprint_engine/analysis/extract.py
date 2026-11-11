@@ -11,6 +11,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
+from blueprint_engine.analysis.segment import clean_text
 from blueprint_engine.analysis.taxonomy import TAXONOMY, Pillar, classify
 from blueprint_engine.models import Document, Insight, Segment
 
@@ -51,9 +52,26 @@ _NOISE = re.compile(
     r"\b(?:subscribe|like (?:and|the|this) (?:video|subscribe)|comment (?:below|down)|patreon|my discord|"
     r"join (?:the|my|our) discord|links? (?:is |are )?in (?:the |my )?description|sponsor(?:ed)? by|"
     r"this video is sponsored|smash (?:that|the)|notification bell|merch|use (?:my )?code|"
-    r"(?:in|on) (?:this|today'?s|the next|my last) video|thanks for watching|see you (?:in the next|next time))\b",
+    r"(?:in|on) (?:this|today'?s|the next|my last) video|thanks for watching|see you (?:in the next|next time)|"
+    r"creator code|star ?code|discount code|promo code|my (?:course|academy|program|coaching|mentorship)|"
+    r"developer academy|check out my|link (?:down )?below|comment section|let me know in the comments|contact me|"
+    r"my apologies|free (?:ui )?packs? (?:that )?i make|join (?:my|our) group)\b",
     re.I,
 )
+# Click-path instructions ("go to the Experiences tab and click Create") are procedure, not design.
+_PROCEDURE = re.compile(
+    r"\b(?:click(?:ing)? (?:on|the)|(?:the|this) \w+ tab|go to (?:the )?(?:creator (?:hub|dashboard)|settings|home|"
+    r"explorer|properties|toolbox)|navigate to|scroll down|right[- ]click|drag (?:it|this|that)|toolbox|"
+    r"explorer (?:window|panel)|properties (?:window|panel)|insert object|press (?:the )?\w+ (?:key|button))\b",
+    re.I,
+)
+# Principles and definitions ("a core loop consists of...", "for example, in Jailbreak...").
+_PRINCIPLE = [re.compile(p, re.I) for p in (
+    r"\bcan be (?:broken down|divided|split) into\b", r"\bconsists? of\b", r"\b(?:for example|as an example|such as)\b",
+    r"\bthe (?:core|game(?:play)?|primary) loop (?:is|in|of)\b",
+    r"\b(?:well-designed|successful|great|good|best|top|popular) (?:games?|experiences?|loops?|onboarding)\b",
+    r"\bthe (?:goal|purpose|job) of\b", r"\b(?:works?|worked) because\b", r"\bplayers? (?:want|love|hate|need|expect)\b",
+)]
 
 
 _LEAD_IN = re.compile(
@@ -73,26 +91,64 @@ class ExtractConfig:
     max_insights_per_pillar_per_source: int = 20
 
 
+_NUMERIC = re.compile(r"\d|\bd(?:1|7|30)\b|\bday (?:one|seven|thirty)\b", re.I)
+
+
 def metric_mentions(text: str) -> list[str]:
-    """Each metric match with a few words of context: '40% D1 retention'."""
+    """Each *numeric* metric with a few words of context: '40% D1 retention'.
+
+    Bare metric words ("retention") raise actionability but are not numbers worth citing.
+    """
     out = []
     for m in _METRIC.finditer(text):
+        if not _NUMERIC.search(m.group(0)):
+            continue
         left = text[: m.start()].split()[-3:]
         right = text[m.end():].split()[:3]
         out.append(" ".join([*left, m.group(0), *right]).strip(" ,.;:"))
     return list(dict.fromkeys(out))
 
 
-def actionability(text: str, pillar_score: float) -> float:
+def actionability(text: str, pillar_score: float, *, first_party: bool = False) -> float:
+    """0..1: how much a sentence reads like transferable design advice.
+
+    Directives, imperatives, causal reasoning, numbers and stated principles raise it;
+    click-path procedure lowers it. First-party text gets a bonus because its plain
+    declarative statements ("discounts on subscriptions are not eligible") are facts.
+    """
     strong = sum(1 for r in _DIRECTIVE_STRONG if r.search(text))
     weak = sum(1 for r in _DIRECTIVE_WEAK if r.search(text))
     directive = min(strong + 0.5 * weak, 1.5)
+    causal = bool(_CAUSAL.search(text))
     a = directive * 0.4
     a += 0.25 if _IMPERATIVE.search(text) else 0.0
-    a += 0.15 if _CAUSAL.search(text) else 0.0
+    a += 0.15 if causal else 0.0
     a += 0.15 if _METRIC.search(text) else 0.0
     a += min(pillar_score, 3.0) / 3.0 * 0.2
-    return round(min(a, 1.0), 3)
+    a += min(sum(1 for r in _PRINCIPLE if r.search(text)), 2) * 0.12
+    if first_party:
+        a += 0.15
+    if _PROCEDURE.search(text) and not causal:
+        a -= 0.35
+    return round(max(0.0, min(a, 1.0)), 3)
+
+
+_FILLER = re.compile(r"\b(?:um+|uh+|like|you know|okay|ok|so yeah|kind of|sort of|i mean|basically|literally)\b", re.I)
+
+
+def readability(text: str) -> float:
+    """0.5..1.0 - how well a passage stands alone as a quote (used to rank evidence)."""
+    words = text.split()
+    n = len(words) or 1
+    q = 1.0
+    if not text[:1].isupper() and not text[:1].isdigit():
+        q -= 0.15  # starts mid-sentence (typical of unpunctuated ASR)
+    if not re.search(r"[.!?…\"')]$", text.strip()):
+        q -= 0.1  # trails off
+    if n < 10 or n > 70:
+        q -= 0.1
+    q -= min(len(_FILLER.findall(text)) / n * 4, 0.25)
+    return round(max(q, 0.5), 3)
 
 
 def _jaccard(a: str, b: str) -> float:
@@ -111,7 +167,8 @@ def extract_insights(
     cfg = cfg or ExtractConfig()
     pillars = pillars or TAXONOMY
     threshold = cfg.min_actionability_docs if kind == "doc" else cfg.min_actionability
-    segs: list[Segment] = [s for s in doc.segments if s.text]
+    # Re-clean: cached documents may predate a cleaning rule.
+    segs: list[Segment] = [Segment(t, s.start) for s in doc.segments if (t := clean_text(s.text))]
 
     # Score every sentence once.
     scored = []
@@ -125,8 +182,10 @@ def extract_insights(
             scored.append(None)
             continue
         best = cls[0]
-        a = actionability(seg.text, best.score)
-        scored.append((cls, a) if a >= threshold else None)
+        a = actionability(seg.text, best.score, first_party=kind == "doc")
+        # Strongly on-topic statements clear a lower bar than passing remarks.
+        bar = threshold - 0.1 if best.score >= 2.5 else threshold
+        scored.append((cls, a) if a >= bar else None)
 
     # Merge consecutive qualifying sentences that share a top pillar into passages.
     passages: list[tuple[int, int]] = []

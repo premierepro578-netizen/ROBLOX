@@ -16,6 +16,7 @@ from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from typing import Any
 
+from blueprint_engine.analysis.extract import readability
 from blueprint_engine.analysis.taxonomy import TAXONOMY, mechanic_label
 from blueprint_engine.config import Config
 from blueprint_engine.models import Document, Insight, Source
@@ -90,7 +91,7 @@ class Blueprint:
 
 
 def _evidence(ins: Insight, src: Source) -> Evidence:
-    stale = next((r.notice for r in STALE_RULES if r.matches(ins.text) and src.kind != "doc"), None)
+    stale = next((r.notice for r in STALE_RULES if r.matches(ins.text) and not src.first_party), None)
     return Evidence(
         source_id=src.id,
         title=src.title,
@@ -107,16 +108,21 @@ def _evidence(ins: Insight, src: Source) -> Evidence:
     )
 
 
+def _evidence_rank(ins: Insight, src: Source) -> float:
+    quality = 1.0 if ins.tactic else readability(ins.text)  # LLM tactics are already clean
+    return ins.actionability * (0.35 + src.score) * quality + (0.05 if ins.metrics else 0.0)
+
+
 def _pick_evidence(items: list[tuple[Insight, Source]], k: int = 5) -> list[Evidence]:
-    ranked = sorted(items, key=lambda x: -(x[0].actionability * (0.35 + x[1].score) + (0.05 if x[0].metrics else 0)))
+    ranked = sorted(items, key=lambda x: -_evidence_rank(*x))
     chosen: list[tuple[Insight, Source]] = []
     seen: set[str] = set()
-    # Pass 1: best insight from each distinct media source; pass 2: one first-party doc line.
+    # Pass 1: best insight from each distinct creator source; pass 2: one first-party line.
     for ins, src in ranked:
-        if src.kind != "doc" and src.id not in seen and len(chosen) < k - 1:
+        if not src.first_party and src.id not in seen and len(chosen) < k - 1:
             chosen.append((ins, src))
             seen.add(src.id)
-    doc = next(((i, s) for i, s in ranked if s.kind == "doc"), None)
+    doc = next(((i, s) for i, s in ranked if s.first_party), None)
     if doc:
         chosen.append(doc)
     for ins, src in ranked:  # top up if few sources
@@ -132,14 +138,16 @@ def platform_notices(sources: dict[str, Source], documents: dict[str, Document])
     """Deprecation / replacement sentences found in first-party docs."""
     import re
 
-    pat = re.compile(r"\b(?:deprecated|replaced by|no longer (?:available|supported)|sunset|will be removed)\b", re.I)
+    pat = re.compile(r"\b(?:is|are|was|were|been|being) (?:now )?(?:deprecated|sunset)\b|\breplaced by\b|"
+                     r"\bno longer (?:available|supported|eligible)\b", re.I)
+    negated = re.compile(r"\b(?:does not|doesn't|do not|don't|is not|isn't) mean\b|\bnot (?:being )?deprecated\b", re.I)
     out = []
     for sid, doc in documents.items():
         src = sources.get(sid)
-        if not src or src.kind != "doc":
+        if not src or not src.first_party:
             continue
         for seg in doc.segments:
-            if pat.search(seg.text):
+            if pat.search(seg.text) and not negated.search(seg.text):
                 out.append({"source_id": sid, "title": src.title, "url": src.url, "text": seg.text})
     return out
 
@@ -171,7 +179,7 @@ def build_blueprint(cfg: Config, sources: dict[str, Source], insights: list[Insi
             for sid, lst in per_source.items():
                 best = max(i.actionability for i in lst)
                 weight += (0.35 + sources[sid].score) * best * (1 + 0.15 * min(len(lst) - 1, 3))
-            doc_titles = sorted({sources[sid].title for sid in per_source if sources[sid].kind == "doc"})
+            doc_titles = sorted({sources[sid].title for sid in per_source if sources[sid].first_party})
             metrics = list(dict.fromkeys(m for ins, _ in pairs for m in ins.metrics))[:12]
             play = play_for(pkey, mech)
             evidence = _pick_evidence(pairs)
@@ -182,7 +190,7 @@ def build_blueprint(cfg: Config, sources: dict[str, Source], insights: list[Insi
                 priority="P2",
                 weight=round(weight, 3),
                 support=len(per_source),
-                media_support=sum(1 for sid in per_source if sources[sid].kind != "doc"),
+                media_support=sum(1 for sid in per_source if not sources[sid].first_party),
                 doc_support=doc_titles,
                 consensus=round(len(per_source) / denom, 3),
                 n_insights=len(pairs),

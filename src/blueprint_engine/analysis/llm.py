@@ -146,6 +146,13 @@ class ClaudeExtractor:
         except (anthropic.AuthenticationError, anthropic.PermissionDeniedError, anthropic.NotFoundError,
                 anthropic.BadRequestError) as exc:
             raise FatalLLMError(f"{type(exc).__name__}: {exc}") from exc
+        except TypeError as exc:
+            # The SDK raises TypeError before sending when no credential source resolves.
+            if "authentication" in str(exc).lower():
+                raise FatalLLMError(
+                    "no Anthropic credentials found: set ANTHROPIC_API_KEY (or log in with `ant auth login`)"
+                ) from exc
+            raise
 
         if resp.stop_reason == "refusal":
             category = getattr(resp.stop_details, "category", None) if resp.stop_details else None

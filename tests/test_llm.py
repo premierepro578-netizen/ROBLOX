@@ -65,6 +65,24 @@ def test_refusal_is_skipped_not_raised():
     assert ex.extract(src, Document("yt:y", "auto-captions", "en", TRANSCRIPT)) == []
 
 
+def test_missing_credentials_is_one_fatal_error(monkeypatch):
+    from blueprint_engine.analysis.llm import FatalLLMError
+
+    for var in ("ANTHROPIC_API_KEY", "ANTHROPIC_AUTH_TOKEN", "ANTHROPIC_PROFILE"):
+        monkeypatch.delenv(var, raising=False)
+    client = anthropic.Anthropic(api_key=None, base_url="https://api.example.test", max_retries=0,
+                                 http_client=httpx2.Client(transport=httpx2.MockTransport(lambda r: httpx2.Response(500))))
+    ex = ClaudeExtractor(client=client)
+    try:
+        ex.extract(Source("yt:z", "youtube", "u", "t"), Document("yt:z", "auto-captions", "en", TRANSCRIPT))
+    except FatalLLMError as exc:
+        assert "credentials" in str(exc)
+    except TypeError:
+        pytest.skip("credentials resolved from the environment (e.g. an `ant` profile)")
+    else:
+        pytest.skip("credentials resolved from the environment (e.g. an `ant` profile)")
+
+
 def test_is_grounded_tolerates_asr_drift():
     text = "so the first thing you want to do is give players a reward right away okay"
     assert is_grounded("The first thing you want to do is give players a reward right away.", text)

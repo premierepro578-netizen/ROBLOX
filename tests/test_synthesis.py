@@ -72,6 +72,26 @@ def test_report_and_framework_render(tmp_path):
     assert "{{evidence_retention}}" not in retention_prompt
 
 
+def test_key_findings_are_injected_per_pillar(tmp_path):
+    cfg, sources, insights, documents = _fixture()
+    bp = build_blueprint(cfg, sources, insights, documents, extractor="heuristic")
+    kf = tmp_path / "key-findings.md"
+    kf.write_text("# Key findings\n\n## retention\n- Pace content weekly.\n\n## onboarding\n- Teach essentials.\n")
+    write_framework(bp, tmp_path / "pf", key_findings_path=kf)
+    retention = (tmp_path / "pf" / "31-retention-systems.md").read_text()
+    core = (tmp_path / "pf" / "30-core-loop-designer.md").read_text()
+    assert "- Pace content weekly." in retention and "Teach essentials" not in retention
+    assert "no curated findings yet" in core
+
+
+def test_repo_key_findings_cover_every_pillar():
+    from blueprint_engine.synthesis.framework import load_key_findings
+
+    cfg = load_config(ROOT / "config" / "research.toml")
+    found = load_key_findings(cfg.key_findings_path)
+    assert set(cfg.pillars) <= set(found)
+
+
 def test_template_parsing_and_render_reports_missing():
     t = parse_template("---\nname: x\ntitle: X\ninputs: a, b\n---\nHello {{a}} and {{ b }}.\n")
     text, missing = render(t, {"a": "A"})

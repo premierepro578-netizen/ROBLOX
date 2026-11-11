@@ -10,7 +10,10 @@ Design the monetization for this game.
 - **Concept, core loop and economy:** {{game_concept}}
 - **Audience (age range, regions, platforms):** {{audience}}
 
-## What top-performing sources teach (research evidence)
+## Curated findings (close reading of first-party talks and docs)
+{{key_findings_monetization}}
+
+## What top-performing sources teach (mined evidence)
 {{evidence_monetization}}
 
 ## Roblox implementation playbook

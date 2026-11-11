@@ -10,7 +10,10 @@ Design the retention systems for this game.
 - **Concept & core loop:** {{game_concept}}
 - **Current metrics (D1/D7/D30, session length, playtime; "pre-launch" if none):** {{current_metrics}}
 
-## What top-performing sources teach (research evidence)
+## Curated findings (close reading of first-party talks and docs)
+{{key_findings_retention}}
+
+## What top-performing sources teach (mined evidence)
 {{evidence_retention}}
 
 ## Roblox implementation playbook

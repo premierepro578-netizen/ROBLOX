@@ -77,6 +77,19 @@ def relevance(title: str, description: str, pillars: list[str], tags: list[str] 
     return round(min(best / 4.0, 1.0) * dev_intent(title, desc), 3)
 
 
+def topical_relevance(title: str, text: str, min_title_score: float = 0.8) -> float:
+    """0..1 best-pillar fit for developer-only venues (forums), where intent is a given.
+
+    Long announcements mention every keyword somewhere, so the *title* must name a design
+    topic (one strong or two weak taxonomy terms) before the body is considered at all.
+    """
+    title_scores = [c.score for c in classify(title, threshold=0.01)]
+    if max(title_scores, default=0.0) < min_title_score:
+        return 0.0
+    scores = [c.score for c in classify(f"{title} {title} {text}"[:3000], threshold=0.01)]
+    return round(min(max(scores, default=0.0) / 4.0, 1.0), 3)
+
+
 def prescore(entry: dict, pillar: str) -> float:
     """Cheap score for flat search results (views + title relevance) used for shortlisting."""
     views = entry.get("view_count") or 0
@@ -115,8 +128,9 @@ def score_sources(sources: list[Source], today: date | None = None) -> None:
     forum = [s for s in sources if s.kind == "devforum"]
     likes = _minmax([math.log1p(s.likes or 0) for s in forum])
     for s, lk in zip(forum, likes):
-        s.score = round(0.3 + 0.4 * lk, 4)
-        s.score_breakdown = {"likes": round(lk, 3)}
+        base = 0.3 + 0.4 * lk
+        s.score = round(max(base, DOC_SCORE) if s.first_party else base, 4)
+        s.score_breakdown = {"likes": round(lk, 3), "first_party": 1.0 if s.first_party else 0.0}
 
     for s in sources:
         if s.kind == "doc":

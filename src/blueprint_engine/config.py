@@ -60,6 +60,12 @@ class Config:
     docs: list[DocPage]
     tiktok: TikTokConfig
     devforum: DevForumConfig
+    path: Path | None = None
+
+    @property
+    def key_findings_path(self) -> Path | None:
+        """Curated close-reading findings that sit next to the config (optional)."""
+        return self.path.parent / "key-findings.md" if self.path else None
 
     @property
     def focus_pillars(self) -> list[str]:
@@ -104,4 +110,5 @@ def load_config(path: str | Path) -> Config:
         docs=docs,
         tiktok=_build(TikTokConfig, raw.get("tiktok")),
         devforum=_build(DevForumConfig, raw.get("devforum")),
+        path=Path(path),
     )

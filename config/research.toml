@@ -121,5 +121,9 @@ max_per_handle = 6
 
 [devforum]
 base_url = "https://devforum.roblox.com"
-queries = ["player retention", "onboarding new players", "game pass pricing", "core gameplay loop"]
-topics_per_query = 5
+queries = [
+  "player retention", "improve D1 retention", "onboarding new players", "tutorial design",
+  "game pass pricing", "monetization tips", "core gameplay loop", "daily rewards",
+  "discovery recommendations", "analytics funnel",
+]
+topics_per_query = 6

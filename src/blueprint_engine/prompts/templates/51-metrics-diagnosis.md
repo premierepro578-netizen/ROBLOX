@@ -13,7 +13,17 @@ Diagnose this game's metrics and plan the next experiments.
 ## Recent changes and their dates
 {{recent_changes}}
 
-## Research evidence
+## Curated findings
+### Onboarding
+{{key_findings_onboarding}}
+
+### Retention
+{{key_findings_retention}}
+
+### Monetization
+{{key_findings_monetization}}
+
+## Mined research evidence
 ### Onboarding
 {{evidence_onboarding}}
 

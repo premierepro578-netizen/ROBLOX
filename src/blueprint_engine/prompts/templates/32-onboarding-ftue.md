@@ -10,7 +10,10 @@ Design the first-time user experience (FTUE) for this game.
 - **Concept & core loop:** {{game_concept}}
 - **Target devices:** {{target_devices}}
 
-## What top-performing sources teach (research evidence)
+## Curated findings (close reading of first-party talks and docs)
+{{key_findings_onboarding}}
+
+## What top-performing sources teach (mined evidence)
 {{evidence_onboarding}}
 
 ## Roblox implementation playbook
