@@ -1,0 +1,125 @@
+# Research plan for `bpe`. Edit queries / pages freely; every stage is cached,
+# so re-running only fetches what is new.
+
+[run]
+workers = 4                  # parallel network workers (YouTube rate-limits aggressive clients)
+results_per_query = 12       # search results pulled per query
+shortlist_per_pillar = 24    # candidates per pillar that get full metadata
+top_per_pillar = 12          # transcripts kept per pillar after performance ranking
+min_duration_s = 90          # skip Shorts: too little substance per transcript
+max_duration_s = 3600        # skip livestream VODs
+languages = ["en"]
+min_request_interval_s = 0.4 # global spacing between YouTube requests
+max_age_days = 2200
+min_relevance = 0.3          # fewer, on-topic sources beat a full quota of noise
+
+# ---------------------------------------------------------------------------
+# Design pillars. `focus = false` marks a supporting pillar: it is researched
+# and reported, but the blueprint prioritises the focus pillars.
+# ---------------------------------------------------------------------------
+
+[pillars.core_loop]
+label = "Core gameplay loop"
+queries = [
+  "roblox game core gameplay loop design",
+  "how to make your roblox game fun game design",
+  "roblox simulator game design progression",
+  "game design core loop explained",
+  "roblox game design tips that keep players playing",
+]
+
+[pillars.retention]
+label = "Retention mechanics"
+queries = [
+  "roblox player retention tips",
+  "how to increase roblox game retention",
+  "how to make players come back to your roblox game",
+  "roblox daily rewards streak retention",
+  "game design retention mechanics live ops",
+  "RDC talk retention live ops roblox",
+]
+
+[pillars.onboarding]
+label = "Onboarding & first-time UX"
+queries = [
+  "roblox game onboarding new players first minute",
+  "roblox tutorial design new player experience",
+  "roblox game ui ux design tips",
+  "game onboarding ftue design",
+  "roblox creators onboarding techniques",
+]
+
+[pillars.monetization]
+label = "Monetization"
+queries = [
+  "roblox game monetization strategy",
+  "how to make robux from your roblox game gamepasses developer products",
+  "roblox game passes pricing tips",
+  "free to play monetization design ethical",
+  "RDC monetization talk roblox developers",
+]
+
+[pillars.discovery]
+label = "Discovery & growth"
+focus = false
+queries = [
+  "how roblox algorithm recommends games",
+  "roblox game thumbnail icon click through rate",
+  "how my roblox game got popular",
+]
+
+# ---------------------------------------------------------------------------
+# First-party Roblox documentation (create.roblox.com/docs). Every path below
+# was verified to resolve (HTTP 200) when this config was written.
+# ---------------------------------------------------------------------------
+
+[docs]
+base_url = "https://create.roblox.com/docs"
+pages = [
+  { path = "production/game-design", pillars = ["core_loop"] },
+  { path = "production/game-design/core-loops", pillars = ["core_loop"] },
+  { path = "production/game-design/onboarding", pillars = ["onboarding"] },
+  { path = "production/game-design/ui-ux-design", pillars = ["onboarding"] },
+  { path = "production/game-design/subscription-design", pillars = ["monetization"] },
+  { path = "production/analytics/retention", pillars = ["retention"] },
+  { path = "production/analytics/engagement", pillars = ["retention"] },
+  { path = "production/analytics/funnel-events", pillars = ["onboarding"] },
+  { path = "production/analytics/economy-events", pillars = ["monetization"] },
+  { path = "production/analytics/custom-events", pillars = ["retention"] },
+  { path = "production/analytics/monetization", pillars = ["monetization"] },
+  { path = "production/analytics/acquisition", pillars = ["discovery"] },
+  { path = "production/monetization", pillars = ["monetization"] },
+  { path = "production/monetization/passes", pillars = ["monetization"] },
+  { path = "production/monetization/developer-products", pillars = ["monetization"] },
+  { path = "production/monetization/subscriptions", pillars = ["monetization"] },
+  { path = "production/monetization/engagement-based-payouts", pillars = ["monetization", "retention"] },
+  { path = "production/monetization/price-optimization", pillars = ["monetization"] },
+  { path = "production/monetization/regional-pricing", pillars = ["monetization"] },
+  { path = "production/monetization/private-servers", pillars = ["monetization"] },
+  { path = "production/promotion/experience-notifications", pillars = ["retention"] },
+  { path = "production/promotion/experience-events", pillars = ["retention"] },
+  { path = "production/experiments", pillars = ["onboarding", "monetization"] },
+  { path = "production/publishing/thumbnails", pillars = ["discovery"] },
+  { path = "discovery", pillars = ["discovery"] },
+]
+
+# ---------------------------------------------------------------------------
+# TikTok: yt-dlp's TikTok search/tag extractors are broken upstream, so TikTok
+# is ingested from creator handles or explicit video URLs. Most TikToks carry no
+# caption track; those are kept as metadata-only sources (title/description).
+# ---------------------------------------------------------------------------
+
+[tiktok]
+handles = ["@roblox"]
+videos = []
+max_per_handle = 6
+
+# ---------------------------------------------------------------------------
+# Roblox DevForum (Discourse JSON API). Skipped automatically while the forum
+# redirects to its maintenance page.
+# ---------------------------------------------------------------------------
+
+[devforum]
+base_url = "https://devforum.roblox.com"
+queries = ["player retention", "onboarding new players", "game pass pricing", "core gameplay loop"]
+topics_per_query = 5

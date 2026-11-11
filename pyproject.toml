@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blueprint-engine"
+version = "0.1.0"
+description = "Research pipeline that mines top-performing game-design content (YouTube, TikTok, Roblox docs) into evidence-backed implementation blueprints."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "yt-dlp>=2025.1.1",
+  "requests>=2.31",
+  "beautifulsoup4>=4.12",
+  "lxml>=5.0",
+]
+
+[project.optional-dependencies]
+# Fallback transcript source; works from residential IPs (YouTube blocks most cloud IPs).
+transcripts = ["youtube-transcript-api>=1.0"]
+# Claude-backed extraction (`bpe analyze --extractor claude`).
+llm = ["anthropic>=2.0"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+bpe = "blueprint_engine.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+blueprint_engine = ["prompts/templates/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
